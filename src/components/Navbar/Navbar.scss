@@ -1,0 +1,15 @@
+.navbar {
+  padding: 1rem;
+
+  .navbar-brand img {
+    height: 20px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    &:hover {
+      color: #007bff;
+    }
+  }
+}

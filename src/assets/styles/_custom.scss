@@ -1,0 +1,23 @@
+// Override Bootstrap variables
+$primary: #6f5499; // Change the primary color
+$font-family-sans-serif: 'Roboto', sans-serif; // Change the default font
+
+// Import Bootstrap SCSS for recompilation
+@import 'bootstrap/scss/bootstrap';
+
+// Add your own custom styles
+body {
+  background-color: #f4f4f4;
+}
+
+.custom-button {
+  background-color: $primary;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+}
