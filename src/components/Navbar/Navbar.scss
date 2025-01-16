@@ -1,11 +1,33 @@
 .navbar {
-  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  transition: background-color 0.3s ease;
 
-  .navbar-brand img {
-    height: 20px;
+  &.transparent-navbar {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-brand {
+    color: white;
+    font-weight: 200;
+
+    span {
+      font-weight: 900;
+    }
+
+    img {
+      height: 20px;
+    }
   }
 
   .nav-link {
+    color: #eee;
     font-size: 1rem;
     margin: 0 0.5rem;
 
@@ -13,9 +35,18 @@
       color: #007bff;
     }
 
-    color: #ddd;
     &:hover {
       color: #fff;
     }
   }
 }
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+

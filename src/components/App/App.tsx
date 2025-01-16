@@ -28,7 +28,7 @@ const App: React.FC = () => {
             fontSize: '2rem',
           }}
         >
-          <h1>ezspaceCSS Bootstrap 3 spacing utility & helper classes</h1>
+          <h1>ezspaceCSS<br />spacing utility & helper classes<br />for Bootstrap 3</h1>
         </div>
       </section>
       <main>
