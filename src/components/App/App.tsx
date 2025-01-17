@@ -2,6 +2,8 @@ import React from 'react';
 import './App.scss';
 import AppNavbar from '../Navbar/Navbar';
 import heroImage from '../../assets/images/ezspace-image-modern.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 const App: React.FC = () => {
   return (
@@ -28,7 +30,32 @@ const App: React.FC = () => {
             fontSize: '2rem',
           }}
         >
-          <h1>ezspaceCSS<br />spacing utility & helper classes<br />for Bootstrap 3</h1>
+          <div className="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
+            <div className="row">
+              <div className="col">
+                <h1 style={{marginBottom: '2rem'}}>
+                  ezspaceCSS<br />
+                  spacing utility & helper classes<br />
+                  for Bootstrap 3
+                </h1>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col call-out-bg">
+                <h2 className="home-description">
+                Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3
+                </h2>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col">
+                <button className="btn btn-circle-outline">
+                  <FontAwesomeIcon icon={faAngleDoubleDown} className="white-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <main>
@@ -52,9 +79,6 @@ const App: React.FC = () => {
           <p>Reach out to us anytime!</p>
         </section>
       </main>
-
-      <h1>Hello, World!</h1>
-      <button className="btn btn-primary">Click Me</button>
     </div>
   );
 };

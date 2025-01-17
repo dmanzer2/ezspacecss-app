@@ -70,7 +70,8 @@ const AppNavbar: React.FC = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <FontAwesomeIcon icon={faGithubAlt} />  EZSPACE<span>CSS</span>
+          <FontAwesomeIcon icon={faGithubAlt} />  EZSPACE
+          <span className="highlighted-text">CSS</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-nav" />
