@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.scss';
-import AppNavbar from '../Navbar/Navbar';
 import heroImage from '../../assets/images/ezspace-image-modern.jpg';
+import AppNavbar from '../Navbar/Navbar';
+import AboutSection from '../About/About';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 const App: React.FC = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
       <AppNavbar />
@@ -34,23 +42,31 @@ const App: React.FC = () => {
             <div className="row">
               <div className="col">
                 <h1 style={{marginBottom: '2rem'}}>
-                  ezspaceCSS<br />
+                  <span>ezspace</span>CSS<br />
                   spacing utility & helper classes<br />
                   for Bootstrap 3
                 </h1>
               </div>
             </div>
-            <div className="row">
-              <div className="col call-out-bg">
+            <div className="row justify-content-center px-3">
+              <div className="col-12 col-md-8 call-out-bg">
                 <h2 className="home-description">
                 Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3
                 </h2>
+                <div className="npm-call-out mx-auto">
+                  <a
+                    href="https://www.npmjs.com/package/ez-space-css-repo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    $ npm install ez-space-css-repo
+                  </a>
+                </div>
               </div>
             </div>
-
             <div className="row">
               <div className="col">
-                <button className="btn btn-circle-outline">
+                <button className="btn btn-circle-outline" onClick={scrollToAbout}>
                   <FontAwesomeIcon icon={faAngleDoubleDown} className="white-icon" />
                 </button>
               </div>
@@ -59,10 +75,7 @@ const App: React.FC = () => {
         </div>
       </section>
       <main>
-        <section id="about" style={{ padding: '100px 0', textAlign: 'center' }}>
-          <h1>About</h1>
-          <p>Learn more about us!</p>
-        </section>
+        <AboutSection />
 
         <section id="download" style={{ padding: '100px 0', textAlign: 'center' }}>
           <h1>Download</h1>

@@ -1,14 +1,19 @@
 $primary-color: #3498db;
+$bright-yellow: #fae13d;
 
 .App {
   text-align: center;
   
   h1 {
-    color: #fae13d;
+    color: $bright-yellow;
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica,Arial, sans-serif;
     font-weight: 700;
     text-shadow: 0 0 9px black;
+
+    span {
+      font-weight: 300;
+    }
   }
 
   h2.home-description {
@@ -17,6 +22,7 @@ $primary-color: #3498db;
     font-size: 1.5rem;
     font-weight: 400;
     text-shadow: 0 0 9px black;
+    margin-bottom: 2rem;
   }
 
   .call-out-bg {
@@ -24,6 +30,24 @@ $primary-color: #3498db;
     padding: 2rem;
     border-radius: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .npm-call-out {
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: .5rem;
+    width: 75%;
+    font-size: 1rem;
+
+    a {
+      color: white;
+      margin-bottom: 0;
+      text-decoration: none;
+
+      &:hover {
+        color: $bright-yellow;
+      }
+    }
   }
 
   .btn-circle-outline {

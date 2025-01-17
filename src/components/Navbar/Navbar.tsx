@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import './Navbar.scss';
-// import logo from '../../assets/images/dummy_153x20_000000_6f5499.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
@@ -59,7 +58,7 @@ const AppNavbar: React.FC = () => {
       sticky="top"
       className={`navbar ${isScrolled ? 'scrolled' : 'transparent-navbar'}`}
     >
-      <Container>
+      <Container fluid>
         {/* Logo Click Resets Active Section */}
         <Navbar.Brand
           href="#home"

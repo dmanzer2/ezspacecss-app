@@ -1,0 +1,27 @@
+$bright-yellow: #fae13d;
+
+#about {
+  background-color: #d8eafd;
+  padding: 100px 0;
+  color: #333;
+  min-height: 100vh;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $bright-yellow;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica,Arial, sans-serif;
+    font-weight: 700;
+    text-shadow: 0 0 9px black;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  img {
+    border-radius: 8px; // Rounded corners for the image
+  }
+}
