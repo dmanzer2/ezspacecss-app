@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import heroImage from '../../assets/images/ezspace-image-modern.jpg';
 import AppNavbar from '../Navbar/Navbar';
 import AboutSection from '../About/About';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+import { faClipboard } from '@fortawesome/free-solid-svg-icons';
 
 const App: React.FC = () => {
+  const [copyAlert, setCopyAlert] = useState(false); // State to manage the alert visibility
+
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleCopy = () => {
+    const textToCopy = 'npm install ez-space-css-repo';
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      setCopyAlert(true);
+      setTimeout(() => setCopyAlert(false), 3000);
+    });
   };
 
   return (
@@ -56,12 +67,29 @@ const App: React.FC = () => {
                 <div className="npm-call-out mx-auto">
                   <a
                     href="https://www.npmjs.com/package/ez-space-css-repo"
+                    title="Check out the npm package"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    $ npm install ez-space-css-repo
+                    $ npm install ez-space-css-repo 
                   </a>
+                  <button
+                    type="button"
+                    className="btn btn-link ml-3"
+                    title="Copy to clipboard"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent default behavior if needed
+                      handleCopy(); // Trigger the copy action
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faClipboard} />
+                  </button>
                 </div>
+                {copyAlert && (
+                  <div className="alert alert-success mt-3" role="alert">
+                    Text copied to clipboard!
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
