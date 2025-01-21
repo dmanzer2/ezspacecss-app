@@ -86,7 +86,7 @@ const App: React.FC = () => {
                   </button>
                 </div>
                 {copyAlert && (
-                  <div className="alert alert-success mt-3" role="alert">
+                  <div className="alert alert-success mb-0" role="alert">
                     Text copied to clipboard!
                   </div>
                 )}

@@ -16,7 +16,7 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="row mb-5">
           {/* First Column */}
-          <div className="col-md-7">
+          <div className="col-md-7 order-1 order-md-0">
             <p><strong>Why would I need exspaceCSS?</strong></p>
             <p>Tired of fiddling with inconsistent margins and padding in your <a href="http://getbootstrap.com/css/#grid-media-queries" target="_blank" rel="noopener noreferrer">Bootstrap 3</a> layouts? Meet ezspaceCSS—a lightweight, developer-friendly spacing utility designed to make your life easier. Built with SASS, ezspaceCSS integrates seamlessly into your project, whether you prefer to use a npm package or a plain old CSS file.</p>
                   
@@ -27,11 +27,11 @@ const AboutSection: React.FC = () => {
             <p>In a nutshell, ezspaceCSS is a powerful yet simple tool that's tailor-made for Bootstrap 3 developers. Its intuitive 5px spacing system makes achieving a professional, well-structured layout a breeze. Say goodbye to frustration and hello to a smarter way to style your projects.</p>
           </div>
           {/* Second Column */}
-          <div className="col-md-5">
+          <div className="col-md-5 order-0 order-md-1">
             <img
               src={aboutImg1}
               alt=""
-              className="img-fluid rounded shadow"
+              className="img-fluid rounded shadow mb-3"
             />
           </div>
         </div>
@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
           <img
               src={aboutImg2}
               alt=""
-              className="img-fluid rounded shadow"
+              className="img-fluid rounded shadow mb-3"
             />
           </div>
           <div className="col-md-7">

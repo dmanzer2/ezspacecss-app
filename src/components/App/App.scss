@@ -32,10 +32,10 @@ $bright-yellow: #fae13d;
     margin-bottom: 2rem;
 
     .alert-success {
-      background-color: #d4edda;
-      border-color: #c3e6cb;
+      background-color: #ddffe5;
+      border-color: #b6ffc7;
       color: #155724;
-      padding: 1rem;
+      padding: .5rem 1rem;
       border-radius: 0.25rem;
       font-size: 1rem;
     }
@@ -45,6 +45,7 @@ $bright-yellow: #fae13d;
     border-radius: 2rem;
     background-color: rgba(255, 255, 255, 0.2);
     padding: .5rem;
+    margin-bottom: 2rem;
     width: 75%;
     font-size: 1rem;
 
@@ -82,7 +83,7 @@ $bright-yellow: #fae13d;
 
     /* Icon Animation */
     .white-icon {
-      font-size: 1.5rem;
+      font-size: 2rem;
       
       &:hover {
         animation: bounce 1.5s infinite; /* Infinite bounce animation */
