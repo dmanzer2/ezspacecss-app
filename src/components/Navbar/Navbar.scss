@@ -1,17 +1,22 @@
-$active-color: #007bff;
+@import '../../assets/styles/shared';
+
+//Navbar common properties
+$transparent-bg: transparent !important;
+$transition-bg: background-color 0.3s ease;
+$bg-opacity: rgba(0, 0, 0, 0.8) !important;
 
 .navbar {
   position: fixed;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: $transition-bg;
 
   &.transparent-navbar {
-    background-color: transparent !important;
+    background-color: $transparent-bg;
     box-shadow: none;
   }
   
   &.scrolled {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: $bg-opacity;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
@@ -29,7 +34,7 @@ $active-color: #007bff;
     }
   
     &:hover .highlighted-text {
-      color: $active-color;
+      color: $primary-color;
     }
   }
 
@@ -39,11 +44,11 @@ $active-color: #007bff;
     margin: 0 0.5rem;
 
     &.active {
-      color: $active-color;
+      color: $primary-color;
     }
 
     &:hover {
-      color: #fff;
+      color: $bright-yellow;
     }
   }
 
@@ -62,10 +67,10 @@ $active-color: #007bff;
 }
 
 .navbar.transparent-navbar > .container-fluid:has(.navbar-collapse.collapse.show) {
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: background-color 0.3s ease;
+  background-color: $bg-opacity;
+  transition: $transition-bg;
 }
 
 .navbar.scrolled > .container-fluid:has(.navbar-collapse.collapse.show) {
-  background-color: transparent !important;
+  background-color: $transparent-bg;
 }

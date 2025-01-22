@@ -3,6 +3,9 @@ import './App.scss';
 import heroImage from '../../assets/images/ezspace-image-modern.jpg';
 import AppNavbar from '../Navbar/Navbar';
 import AboutSection from '../About/About';
+import DownloadSection from '../Download/Download';
+import CssDevelopment from '../CssDevelopment/CssDevelopment';
+import ContactSection from '../Contact/Contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import { faClipboard } from '@fortawesome/free-solid-svg-icons';
@@ -52,7 +55,7 @@ const App: React.FC = () => {
           <div className="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
             <div className="row">
               <div className="col">
-                <h1 style={{marginBottom: '2rem'}}>
+                <h1>
                   <span>ezspace</span>CSS<br />
                   spacing utility & helper classes<br />
                   for Bootstrap 3
@@ -86,7 +89,7 @@ const App: React.FC = () => {
                   </button>
                 </div>
                 {copyAlert && (
-                  <div className="alert alert-success mb-0" role="alert">
+                  <div className="alert alert-primary mt-3 mb-0" role="alert">
                     Text copied to clipboard!
                   </div>
                 )}
@@ -104,21 +107,9 @@ const App: React.FC = () => {
       </section>
       <main>
         <AboutSection />
-
-        <section id="download" style={{ padding: '100px 0', textAlign: 'center' }}>
-          <h1>Download</h1>
-          <p>Get started by downloading our app.</p>
-        </section>
-
-        <section id="css-development" style={{ padding: '100px 0', textAlign: 'center' }}>
-          <h1>CSS Development</h1>
-          <p>Learn how we develop with CSS.</p>
-        </section>
-
-        <section id="contact" style={{ padding: '100px 0', textAlign: 'center' }}>
-          <h1>Contact</h1>
-          <p>Reach out to us anytime!</p>
-        </section>
+        <DownloadSection />
+        <CssDevelopment />
+        <ContactSection />
       </main>
     </div>
   );
