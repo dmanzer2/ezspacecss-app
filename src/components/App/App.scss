@@ -2,6 +2,23 @@
 
 .App {
   text-align: center;
+
+  .hero {
+    height: 100vh;
+    background-image: url('../../assets/images/ezspace-image-modern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    > .hero-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 0 1rem;
+    }
+  }
   
   h1 {
     color: $bright-yellow;

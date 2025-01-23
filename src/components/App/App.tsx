@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.scss';
-import heroImage from '../../assets/images/ezspace-image-modern.jpg';
 import AppNavbar from '../Navbar/Navbar';
 import AboutSection from '../About/About';
 import DownloadSection from '../Download/Download';
@@ -31,27 +30,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <AppNavbar />
-      <section
-        id="hero"
-        style={{
-          height: '100vh',
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      >
-        <div
-          style={{
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: '#fff',
-            textAlign: 'center',
-            fontSize: '2rem',
-          }}
-        >
+      <section id="hero" className="hero">
+        <div className="hero-area">
           <div className="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
             <div className="row">
               <div className="col">
