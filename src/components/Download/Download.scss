@@ -1,0 +1,31 @@
+@import '../../assets/styles/shared';
+
+#download {
+
+  h3, h4 {
+    color: white;
+    text-wrap: balance;
+    text-shadow: $text-shadow;
+  }
+
+  a {
+    color: white;
+  }
+
+  .npm-call-out {
+    background-color: white;
+    width: 35%;
+    color: black;
+  }
+  
+  .download-section {
+    background-image: url('../../assets/images/about-image2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    clip-path: polygon(0 70px,100% 0,100% calc(100% - 70px),0 100%);
+    position: relative;
+    margin-top: -70px;
+    padding: 5rem;
+  }
+}
