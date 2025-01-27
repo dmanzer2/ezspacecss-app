@@ -1,57 +1,54 @@
 
 @import '../../assets/styles/shared';
 
- #contact {
+.contact-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../assets/images/ezspace-image-modern.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+
+  .contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-area {
+    z-index: 1;
+  }
+
+  h3, p, a {
+    color: white;
+    z-index: 2;
+  }
+
+  .btn-circle-outline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
   
-  .contact-section {
-    position: relative;
-    height: 100vh;
-    background-image: url('../../assets/images/ezspace-image-modern.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-  
-    .contact-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    &:hover {
+      background-color: white;
+      color: #007bff;
     }
   
-    .contact-area {
-      z-index: 1;
-    }
-  
-    h3, p, a {
-      color: white;
-      z-index: 2;
-    }
-  
-    .btn-circle-outline {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid white;
-      color: white;
-      background-color: transparent;
-      transition: all 0.3s ease;
-    
-      &:hover {
-        background-color: white;
-        color: #007bff;
-      }
-    
-      .social-icon {
-        font-size: 1.5rem;
-      }
+    .social-icon {
+      font-size: 1.5rem;
     }
   }
 }

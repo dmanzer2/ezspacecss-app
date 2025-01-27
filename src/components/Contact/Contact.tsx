@@ -7,6 +7,8 @@ import {
   faYoutube,
   faPinterest,
   faInstagram,
+  faNpm,
+  faGithubAlt
 } from '@fortawesome/free-brands-svg-icons';
 
 const ContactSection: React.FC = () => {
@@ -16,7 +18,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="contact-section">
       <div className="contact-overlay">
         <div className="container contact-area">
-          <div className="row py-5">
+          <div className="row py-5 mt-4">
             <div className="col-12 text-center">
               <h3>Contact ezspaceCSS</h3>
               <p>Please feel free to contact me with any questions.</p>
@@ -29,10 +31,19 @@ const ContactSection: React.FC = () => {
                 ezspaceCSS@gmail.com
               </a>
             </div>
-            <div className="col-12 text-center">
-
+            <div className="col-12 text-center my-4">
+              <a
+                href="https://github.com/dmanzer2/ez-space-css-repo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-light"
+                >
+               <FontAwesomeIcon icon={faGithubAlt} /> GITHUB REPO
+              </a>
+            </div>
+            <div className="col-12 text-center mb-4">
               {/* Social Media Icons */}
-              <div className="social-icons d-flex justify-content-center my-4">
+              <div className="social-icons d-flex justify-content-center mb-4">
                 <a
                   href="https://www.facebook.com/ezspaceCSS/"
                   target="_blank"
@@ -73,8 +84,16 @@ const ContactSection: React.FC = () => {
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
+                <a
+                  href="https://www.npmjs.com/package/ez-space-css-repo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-circle-outline mx-2"
+                >
+                  <FontAwesomeIcon icon={faNpm} />
+                </a>
               </div>
-              <p>ezspaceCSS 1.2.0 © Copyright 2016-{currentYear}</p>
+              <p className="mb-0">ezspaceCSS 1.2.0 © Copyright 2016-{currentYear}</p>
             </div>
           </div>
         </div>

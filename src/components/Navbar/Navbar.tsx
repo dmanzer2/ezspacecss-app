@@ -32,8 +32,8 @@ const AppNavbar: React.FC = () => {
     const sections = [
       { id: 'about', offset: 0 },
       { id: 'download', offset: 5 },
-      { id: 'css-development', offset: 0 },
-      { id: 'contact', offset: 0 },
+      { id: 'css-development', offset: 5 },
+      { id: 'contact', offset: 5 },
     ];
 
     let currentSection = '';
