@@ -29,14 +29,20 @@ const AppNavbar: React.FC = () => {
     }
 
     // Update active section based on scroll position
-    const sections = ['about', 'download', 'css-development', 'contact'];
+    const sections = [
+      { id: 'about', offset: 0 },
+      { id: 'download', offset: 5 },
+      { id: 'css-development', offset: 0 },
+      { id: 'contact', offset: 0 },
+    ];
+
     let currentSection = '';
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
+    sections.forEach(({ id, offset }) => {
+      const element = document.getElementById(id);
       if (element) {
         const rect = element.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom > 0) {
-          currentSection = section;
+        if (rect.top <= offset && rect.bottom > 0) {
+          currentSection = id;
         }
       }
     });

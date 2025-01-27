@@ -11,7 +11,7 @@ const DownloadSection: React.FC = () => {
       <div className="download-section">
         <div className="container">
           <div className="row mb-3">
-            <div className="col-12">
+            <div className="col-12 col-md-6 mx-auto">
               <h3>Download ezspaceCSS<br/>
               bootstrap 3 utility classes</h3>
               <h4>You can download the collection of ezspaceCSS helper classes or install directly in to your project with npm.</h4>

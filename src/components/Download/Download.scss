@@ -8,7 +8,7 @@
     text-shadow: $text-shadow;
   }
 
-  a {
+  a.btn {
     color: white;
   }
 
@@ -26,6 +26,6 @@
     clip-path: polygon(0 70px,100% 0,100% calc(100% - 70px),0 100%);
     position: relative;
     margin-top: -70px;
-    padding: 5rem;
+    padding: 12rem 0;
   }
 }
