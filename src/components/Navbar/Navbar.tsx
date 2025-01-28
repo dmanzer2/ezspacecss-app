@@ -7,28 +7,23 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 const AppNavbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false); // Track scroll state
   const [activeSection, setActiveSection] = useState<string>(''); // Track active section
+  const [expanded, setExpanded] = useState(false); // Track navbar expanded state
 
-  // Function to remove the active class from all Nav.Link elements
   const clearActiveClasses = () => {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link) => link.classList.remove('active'));
   };
 
-  // Handle scroll event
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-
-    // Check if user scrolled past 50px
     setIsScrolled(scrollTop > 50);
 
-    // Clear active section and remove active classes when at the very top
     if (scrollTop === 0) {
       setActiveSection('');
       clearActiveClasses();
       return;
     }
 
-    // Update active section based on scroll position
     const sections = [
       { id: 'about', offset: 0 },
       { id: 'download', offset: 5 },
@@ -50,7 +45,6 @@ const AppNavbar: React.FC = () => {
     setActiveSection(currentSection);
   };
 
-  // Attach scroll listener
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -59,79 +53,85 @@ const AppNavbar: React.FC = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleNavLinkClick = (sectionId: string) => {
+    clearActiveClasses();
+    setActiveSection(sectionId);
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    setExpanded(false); // Close the navbar menu
+  };
+
+  const handleOutsideClick = (e: MouseEvent) => {
+    const navbar = document.querySelector('.navbar-collapse');
+    if (navbar && !navbar.contains(e.target as Node)) {
+      setExpanded(false);
+    }
+  };
+
+  useEffect(() => {
+    if (expanded) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    } else {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [expanded]);
+
   return (
     <Navbar
       expand="lg"
       sticky="top"
       className={`navbar ${isScrolled ? 'scrolled' : 'transparent-navbar'}`}
+      expanded={expanded} // Control the expanded state
     >
       <Container fluid>
-        {/* Logo Click Resets Active Section */}
         <Navbar.Brand
           href="#home"
           onClick={(e) => {
             e.preventDefault();
-            setActiveSection(''); // Clear the active section immediately
-            clearActiveClasses(); // Clear all active classes
+            setActiveSection('');
+            clearActiveClasses();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            setExpanded(false);
           }}
         >
-          <FontAwesomeIcon icon={faGithubAlt} />  EZSPACE
+          <FontAwesomeIcon icon={faGithubAlt} /> EZSPACE
           <span className="highlighted-text">CSS</span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="navbar-nav"
+          onClick={() => setExpanded(!expanded)} // Toggle the expanded state
+        />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link
               href="#about"
               className={activeSection === 'about' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                clearActiveClasses(); // Clear all active classes
-                e.currentTarget.classList.add('active'); // Add active class to clicked item
-                setActiveSection('about'); // Set the active section
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => handleNavLinkClick('about')}
             >
               About
             </Nav.Link>
             <Nav.Link
               href="#download"
               className={activeSection === 'download' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                clearActiveClasses();
-                e.currentTarget.classList.add('active');
-                setActiveSection('download');
-                document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => handleNavLinkClick('download')}
             >
               Download
             </Nav.Link>
             <Nav.Link
               href="#css-development"
               className={activeSection === 'css-development' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                clearActiveClasses();
-                e.currentTarget.classList.add('active');
-                setActiveSection('css-development');
-                document.getElementById('css-development')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => handleNavLinkClick('css-development')}
             >
               CSS Development
             </Nav.Link>
             <Nav.Link
               href="#contact"
               className={activeSection === 'contact' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                clearActiveClasses();
-                e.currentTarget.classList.add('active');
-                setActiveSection('contact');
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => handleNavLinkClick('contact')}
             >
               Contact
             </Nav.Link>
