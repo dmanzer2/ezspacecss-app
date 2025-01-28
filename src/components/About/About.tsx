@@ -37,14 +37,14 @@ const AboutSection: React.FC = () => {
           </div>
 
           <div className="row mb-5 align-items-center">
-            <div className="col-md-3 text-center">
+            <div className="col-md-3 order-2 order-lg-1 text-center">
               <img
                 src={aboutImg2}
                 alt=""
                 className="img-fluid"
               />
             </div>
-            <div className="col-md-9"> 
+            <div className="col-md-9 order-1 order-lg-2"> 
               <p>With a wide range of spacing classes, ezspaceCSS gives you pinpoint control over your design—no more guesswork, no more uneven spacing. Whether you're fine-tuning a button's padding or aligning content across breakpoints, it's all about keeping your workflow efficient and your designs polished.</p>
               
               <p>In a nutshell, ezspaceCSS is a powerful yet simple tool that's tailor-made for Bootstrap 3 developers. Its intuitive 5px spacing system makes achieving a professional, well-structured layout a breeze. Say goodbye to frustration and hello to a smarter way to style your projects.</p>
@@ -72,15 +72,15 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="row mb-5 align-items-center">
-            <div className="col-md-3 text-center">
+          <div className="row mb-0 mb-md-5 align-items-center">
+            <div className="col-md-3 order-2 order-lg-1 text-center">
               <img
                 src={aboutImg4}
                 alt=""
                 className="img-fluid"
               />
             </div>
-            <div className="col-md-9">
+            <div className="col-md-9 order-1 order-lg-2">
               <p>That said, Bootstrap 3 did have some limitations. It didn't support flexbox, lacked sizing classes, and didn't natively include SASS support—issues that were addressed in Bootstrap 4. One of the biggest gaps in Bootstrap 3 was its lack of a responsive spacing utility. This made it challenging to maintain consistent and flexible spacing, especially when making quick adjustments. Enter ezspaceCSS.</p>
 
               <p>ezspaceCSS is a custom SASS library that seamlessly integrates with Bootstrap. It provides a set of simple classes to easily add margin and padding to your elements. Its naming conventions align well with Bootstrap's, so it feels like a natural extension of the framework. For instance, using the class sm-pl-20 will add 20px of padding to the left side of an element. Want to add margin instead? Just swap the "p" for an "m." Installation is a breeze—you can install it with npm or download the zip directly from the repo.</p>
@@ -92,32 +92,32 @@ const AboutSection: React.FC = () => {
           <div className="row text-center example-section">
             <div className="col-12">
               <h4 className="mb-3">First choose a screen size (based on Bootstrap 3)</h4>
-              <div className="row mb-5">
-                <div className="col-md-3"><strong>Extra Small:</strong> <code>xs</code></div>
-                <div className="col-md-3"><strong>Small:</strong> <code>sm</code></div>
-                <div className="col-md-3"><strong>Medium:</strong> <code>md</code></div>
-                <div className="col-md-3"><strong>Large:</strong> <code>lg</code></div>
+              <div className="row mb-3 mb-md-5">
+                <div className="col-12 col-md-3"><p><strong>Extra Small:</strong> <code>xs</code></p></div>
+                <div className="col-12 col-md-3"><p><strong>Small:</strong> <code>sm</code></p></div>
+                <div className="col-12 col-md-3"><p><strong>Medium:</strong> <code>md</code></p></div>
+                <div className="col-12 col-md-3"><p><strong>Large:</strong> <code>lg</code></p></div>
               </div>
 
               <h4>Then choose a property (margin or padding)</h4>
-              <div className="row mb-5">
-                <div className="col-md-6"><strong>padding:</strong> <code>p</code></div>
-                <div className="col-md-6"><strong>margin:</strong> <code>m</code></div>
+              <div className="row mb-3 mb-md-5">
+                <div className="col-12 col-md-6"><p><strong>padding:</strong> <code>p</code></p></div>
+                <div className="col-12 col-md-6"><p><strong>margin:</strong> <code>m</code></p></div>
               </div>
 
               <h4>Then choose sides (right, left, top, bottom)</h4>
-              <div className="row mb-5">
-                <div className="col-md-6"><strong>top, bottom, topbottom:</strong> <code>t</code>, <code>b</code>, <code>tb</code></div>
-                <div className="col-md-6"><strong>left, right, leftright:</strong> <code>l</code>, <code>r</code>, <code>lr</code></div>
+              <div className="row mb-3 mb-md-5">
+                <div className="col-12 col-md-6"><p><strong>top, bottom, topbottom:</strong> <code>t</code>, <code>b</code>, <code>tb</code></p></div>
+                <div className="col-12 col-md-6"><p><strong>left, right, leftright:</strong> <code>l</code>, <code>r</code>, <code>lr</code></p></div>
               </div>
 
               <h4>Finally, add a value (in increments of 5px-100px)</h4>
 
-              <div className="row example-usage mb-4">
+              <div className="row example-usage mb-md-4">
                 <div className="col-12">
                   <p><strong>Example:</strong> <code>sm-pl-20</code> adds 20px of padding to the left side of an element at the small screen size</p>
                   <p><strong>Example:</strong> <code>md-plr-15</code> adds 15px of padding to the left and right side of an element at the medium screen size</p>
-                  <p><strong>Example:</strong> <code>lg-mb-35</code> adds 35px of margin to the bottom an element at the large screen size</p>
+                  <p className="mb-0 mb-md-3"><strong>Example:</strong> <code>lg-mb-35</code> adds 35px of margin to the bottom an element at the large screen size</p>
                 </div>
               </div>
 

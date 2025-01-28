@@ -10,14 +10,23 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
   width: 100%;
   transition: $transition-bg;
 
-  &.transparent-navbar {
+  &.transparent-navbar.navbar-light {
     background-color: $transparent-bg;
     box-shadow: none;
+
+    > .container-fluid:has(.navbar-collapse.collapse.show) {
+      background-color: $bg-opacity;
+      transition: $transition-bg;
+    }
   }
   
-  &.scrolled {
+  &.scrolled.navbar-light {
     background-color: $bg-opacity;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    .container-fluid:has(.navbar-collapse.collapse.show) {
+      background-color: $transparent-bg;
+    }
   }
   
   .navbar-brand {
@@ -64,13 +73,4 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
-}
-
-.navbar.transparent-navbar > .container-fluid:has(.navbar-collapse.collapse.show) {
-  background-color: $bg-opacity;
-  transition: $transition-bg;
-}
-
-.navbar.scrolled > .container-fluid:has(.navbar-collapse.collapse.show) {
-  background-color: $transparent-bg;
 }

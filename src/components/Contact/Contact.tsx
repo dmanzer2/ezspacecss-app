@@ -38,7 +38,7 @@ const ContactSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="btn btn-outline-light"
                 >
-               <FontAwesomeIcon icon={faGithubAlt} /> GITHUB REPO
+                <FontAwesomeIcon icon={faGithubAlt} /> GITHUB REPO
               </a>
             </div>
             <div className="col-12 text-center mb-4">

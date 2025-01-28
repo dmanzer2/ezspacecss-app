@@ -47,26 +47,29 @@ const App: React.FC = () => {
                 <h2 className="home-description">
                 Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3
                 </h2>
-                <div className="npm-call-out mx-auto">
-                  <a
-                    href="https://www.npmjs.com/package/ez-space-css-repo"
-                    title="Check out the npm package"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    $ npm install ez-space-css-repo 
-                  </a>
-                  <button
-                    type="button"
-                    className="btn btn-link ml-3"
-                    title="Copy to clipboard"
-                    onClick={(e) => {
-                      e.preventDefault(); // Prevent default behavior if needed
-                      handleCopy(); // Trigger the copy action
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faClipboard} />
-                  </button>
+                <div className="row npm-call-out">
+                  <div className="col-12 mx-auto">
+                    <a
+                      href="https://www.npmjs.com/package/ez-space-css-repo"
+                      title="Check out the npm package"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      $ npm install ez-space-css-repo 
+                    </a>
+                    <button
+                      type="button"
+                      className="btn btn-link ml-3"
+                      title="Copy to clipboard"
+                      onClick={(e) => {
+                        e.preventDefault(); // Prevent default behavior
+                        handleCopy(); // Trigger the copy action
+                      }}
+                    >
+                      <FontAwesomeIcon icon={faClipboard} />
+                    </button>
+                  </div>
+                  
                 </div>
                 {copyAlert && (
                   <div className="alert alert-primary mt-3 mb-0" role="alert">

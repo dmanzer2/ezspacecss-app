@@ -1,6 +1,5 @@
 import React from 'react';
 import './CssDevelopment.scss';
-import ebookImg1 from '../../assets/images/css-mixins-ebook.jpg';
 
 const CssDevelopment: React.FC = () => {
   return (
@@ -11,7 +10,7 @@ const CssDevelopment: React.FC = () => {
         <div className="container">
           <div className="row mb-5 align-items-center">
             <div className="col-md-9">
-              <h3 className="mb-0">Interested in learning or mastering CSS?</h3>
+              <h3 className="mb-md-0 mb-4">Interested in learning or mastering CSS?</h3>
             </div>
             <div className="col-md-3 text-center"> 
               <a

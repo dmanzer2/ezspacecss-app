@@ -54,7 +54,7 @@
   }
 
   .call-out-bg {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(102 57 124 / 70%);
     padding: 2rem;
     border-radius: 2rem;
     margin-bottom: 2rem;
@@ -72,8 +72,7 @@
   .npm-call-out {
     border-radius: 2rem;
     background-color: $black-opacity;
-    padding: .5rem;
-    width: 75%;
+    padding: .5rem 0;
     font-size: 1rem;
 
     a {
@@ -128,6 +127,14 @@
     }
     60% {
       transform: translateY(-4px); /* Slight upward movement */
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .App {
+    .npm-call-out {
+      font-size: 1.1rem;
     }
   }
 }
