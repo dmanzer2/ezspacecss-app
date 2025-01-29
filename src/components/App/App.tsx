@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './App.scss';
 import AppNavbar from '../Navbar/Navbar';
 import AboutSection from '../About/About';
@@ -6,11 +7,10 @@ import DownloadSection from '../Download/Download';
 import CssDevelopment from '../CssDevelopment/CssDevelopment';
 import ContactSection from '../Contact/Contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
-import { faClipboard } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown, faClipboard } from '@fortawesome/free-solid-svg-icons';
 
 const App: React.FC = () => {
-  const [copyAlert, setCopyAlert] = useState(false); // State to manage the alert visibility
+  const [copyAlert, setCopyAlert] = useState(false);
 
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
@@ -29,6 +29,18 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>ezspaceCSS - Bootstrap 3 Spacing Utility</title>
+        <meta name="description" content="Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3." />
+        <meta name="keywords" content="CSS, Bootstrap, spacing, utility classes, frontend, web development" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="ezspaceCSS - Bootstrap 3 Spacing Utility" />
+        <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
+        <meta property="og:url" content="https://ezspacecss.com" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <AppNavbar />
       <section id="hero" className="hero">
         <div className="hero-area">
@@ -45,7 +57,7 @@ const App: React.FC = () => {
             <div className="row justify-content-center px-3">
               <div className="col-12 col-md-8 call-out-bg">
                 <h2 className="home-description">
-                Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3
+                  Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3
                 </h2>
                 <div className="row npm-call-out">
                   <div className="col-12 mx-auto">
@@ -62,14 +74,13 @@ const App: React.FC = () => {
                       className="btn btn-link ml-3"
                       title="Copy to clipboard"
                       onClick={(e) => {
-                        e.preventDefault(); // Prevent default behavior
-                        handleCopy(); // Trigger the copy action
+                        e.preventDefault();
+                        handleCopy();
                       }}
                     >
                       <FontAwesomeIcon icon={faClipboard} />
                     </button>
                   </div>
-                  
                 </div>
                 {copyAlert && (
                   <div className="alert alert-primary mt-3 mb-0" role="alert">
