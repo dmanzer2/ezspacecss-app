@@ -3,7 +3,7 @@ $primary: #007bff;
 $font-family-sans-serif: 'Roboto', sans-serif; // Change the default font
 
 // Import Bootstrap SCSS for recompilation
-@use 'bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 body {
   background-color: transparent !important;
