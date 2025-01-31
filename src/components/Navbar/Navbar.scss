@@ -1,4 +1,4 @@
-@import '../../assets/styles/shared';
+@use '../../assets/styles/shared' as *;
 
 //Navbar common properties
 $transparent-bg: transparent !important;
