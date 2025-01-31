@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
 import './Navbar.scss';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
