@@ -2,23 +2,6 @@
 
 .App {
   text-align: center;
-
-  .hero {
-    height: 100vh;
-    background-image: url('../../assets/images/ezspace-image-modern.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    > .hero-area {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 0 1rem;
-    }
-  }
   
   h1 {
     color: $bright-yellow;
@@ -51,90 +34,5 @@
     font-size: 1rem;
     line-height: 1.6;
     color: #333;
-  }
-
-  .call-out-bg {
-    background-color: rgb(102 57 124 / 70%);
-    padding: 2rem;
-    border-radius: 2rem;
-    margin-bottom: 2rem;
-
-    .alert-primary {
-      background-color: #d6eaff;
-      border-color: #82beff;
-      color: $primary-color;
-      padding: .5rem 1rem;
-      border-radius: 0.25rem;
-      font-size: 1rem;
-    }
-  }
-
-  .npm-call-out {
-    border-radius: 2rem;
-    background-color: $black-opacity;
-    padding: .5rem 0;
-    font-size: 1rem;
-
-    a {
-      color: white;
-      margin-bottom: 0;
-      text-decoration: none;
-
-      &:hover {
-        color: $bright-yellow;
-      }
-    }
-
-    .btn-link {
-      color: $bright-yellow;
-    }
-  }
-
-  .btn-circle-outline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    border: 2px solid white;
-    border-radius: 50%;
-    color: white;
-    background-color: transparent;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: $black-opacity; 
-      color: white;
-    }
-
-    /* Icon Animation */
-    .white-icon {
-      font-size: 2rem;
-      
-      &:hover {
-        animation: bounce 1.5s infinite; /* Infinite bounce animation */
-      }
-    }
-  }
-
-  /* Keyframes for Icon Animation */
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0); /* Default position */
-    }
-    40% {
-      transform: translateY(-8px); /* Upward movement */
-    }
-    60% {
-      transform: translateY(-4px); /* Slight upward movement */
-    }
-  }
-}
-
-@media (min-width: 576px) {
-  .App {
-    .npm-call-out {
-      font-size: 1.1rem;
-    }
   }
 }
