@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './App.scss';
@@ -17,7 +17,7 @@ const sections = [
   { id: 'contact', component: <ContactSection />, offset: 0 },
 ];
 
-const ScrollSpy = () => {
+const ScrollSpy = ({ setActiveSection }: { setActiveSection: (section: string) => void }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -38,6 +38,7 @@ const ScrollSpy = () => {
         }
       });
 
+      setActiveSection(currentSection);
       const newPath = currentSection === 'home' ? '/' : `/${currentSection}`;
 
       if (location.pathname !== newPath) {
@@ -47,12 +48,14 @@ const ScrollSpy = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [navigate, location]);
+  }, [navigate, location, setActiveSection]);
 
   return null;
 };
 
 const App: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<string>('home');
+
   return (
     <Router>
       <div className="App">
@@ -67,8 +70,8 @@ const App: React.FC = () => {
           <meta property="og:type" content="website" />
         </Helmet>
 
-        <AppNavbar />
-        <ScrollSpy />
+        <AppNavbar activeSection={activeSection} />
+        <ScrollSpy setActiveSection={setActiveSection} />
 
         <main>
           {sections.map(({ id, component }) => (

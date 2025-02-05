@@ -7,9 +7,8 @@ import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
-const AppNavbar: React.FC = () => {
+const AppNavbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>('');
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
 
@@ -22,13 +21,7 @@ const AppNavbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const clearActiveClasses = () => {
-    document.querySelectorAll('.nav-link').forEach((link) => link.classList.remove('active'));
-  };
-
   const handleNavLinkClick = (sectionId: string) => {
-    clearActiveClasses();
-    setActiveSection(sectionId);
     navigate(`/${sectionId}`);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setExpanded(false);
@@ -47,8 +40,6 @@ const AppNavbar: React.FC = () => {
           to="/"
           onClick={(e) => {
             e.preventDefault();
-            setActiveSection('');
-            clearActiveClasses();
             window.scrollTo({ top: 0, behavior: 'smooth' });
             navigate('/');
             setExpanded(false);
