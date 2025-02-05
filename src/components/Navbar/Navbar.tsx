@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.scss';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,95 +8,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
 const AppNavbar: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false); // Track scroll state
-  const [activeSection, setActiveSection] = useState<string>(''); // Track active section
-  const [expanded, setExpanded] = useState(false); // Track navbar expanded state
-
-  const clearActiveClasses = () => {
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach((link) => link.classList.remove('active'));
-  };
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    setIsScrolled(scrollTop > 50);
-
-    if (scrollTop === 0) {
-      setActiveSection('');
-      clearActiveClasses();
-      return;
-    }
-
-    const sections = [
-      { id: 'about', offset: 0 },
-      { id: 'download', offset: 5 },
-      { id: 'css-development', offset: 5 },
-      { id: 'contact', offset: 5 },
-    ];
-
-    let currentSection = '';
-    sections.forEach(({ id, offset }) => {
-      const element = document.getElementById(id);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= offset && rect.bottom > 0) {
-          currentSection = id;
-        }
-      }
-    });
-
-    setActiveSection(currentSection);
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
+  const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const clearActiveClasses = () => {
+    document.querySelectorAll('.nav-link').forEach((link) => link.classList.remove('active'));
+  };
 
   const handleNavLinkClick = (sectionId: string) => {
     clearActiveClasses();
     setActiveSection(sectionId);
+    navigate(`/${sectionId}`);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setExpanded(false); // Close the navbar menu
+    setExpanded(false);
   };
-
-  const handleOutsideClick = (e: MouseEvent) => {
-    const navbar = document.querySelector('.navbar-collapse');
-    if (navbar && !navbar.contains(e.target as Node)) {
-      setExpanded(false);
-    }
-  };
-
-  useEffect(() => {
-    if (expanded) {
-      document.addEventListener('mousedown', handleOutsideClick);
-    } else {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, [expanded]);
 
   return (
     <Navbar
       expand="lg"
       sticky="top"
       className={`navbar ${isScrolled ? 'scrolled' : 'transparent-navbar'}`}
-      expanded={expanded} // Control the expanded state
+      expanded={expanded}
     >
       <Container fluid>
         <Navbar.Brand
-          href="#home"
+          as={Link}
+          to="/"
           onClick={(e) => {
             e.preventDefault();
             setActiveSection('');
             clearActiveClasses();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            navigate('/');
             setExpanded(false);
           }}
         >
@@ -105,36 +60,20 @@ const AppNavbar: React.FC = () => {
 
         <Navbar.Toggle
           aria-controls="navbar-nav"
-          onClick={() => setExpanded(!expanded)} // Toggle the expanded state
+          onClick={() => setExpanded(!expanded)}
         />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link
-              href="#about"
-              className={activeSection === 'about' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('about')}
-            >
+            <Nav.Link as={Link} to="/about" className={activeSection === 'about' ? 'active' : ''} onClick={() => handleNavLinkClick('about')}>
               About
             </Nav.Link>
-            <Nav.Link
-              href="#download"
-              className={activeSection === 'download' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('download')}
-            >
+            <Nav.Link as={Link} to="/download" className={activeSection === 'download' ? 'active' : ''} onClick={() => handleNavLinkClick('download')}>
               Download
             </Nav.Link>
-            <Nav.Link
-              href="#css-development"
-              className={activeSection === 'css-development' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('css-development')}
-            >
+            <Nav.Link as={Link} to="/css-development" className={activeSection === 'css-development' ? 'active' : ''} onClick={() => handleNavLinkClick('css-development')}>
               CSS Development
             </Nav.Link>
-            <Nav.Link
-              href="#contact"
-              className={activeSection === 'contact' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('contact')}
-            >
+            <Nav.Link as={Link} to="/contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => handleNavLinkClick('contact')}>
               Contact
             </Nav.Link>
           </Nav>

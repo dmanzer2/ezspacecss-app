@@ -8,7 +8,7 @@ const CssDevelopment: React.FC = () => {
     >
       <div className="dev-section">
         <div className="container">
-          <div className="row mb-5 align-items-center">
+          <div className="row align-items-center call-to-action">
             <div className="col-md-9">
               <h3 className="mb-md-0 mb-4">Interested in learning or mastering CSS?</h3>
             </div>
