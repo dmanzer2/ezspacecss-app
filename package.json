@@ -2,7 +2,7 @@
   "name": "ezspacecss-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dmanzer2.github.io/ezspacecss-app",
+  "homepage": "https://dmanzer2.github.io/ezspacecss-app",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
