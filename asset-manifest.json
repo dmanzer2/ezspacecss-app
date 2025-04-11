@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c656f6f.css",
+    "main.css": "/static/css/main.c718fd58.css",
     "main.js": "/static/js/main.de57c32b.js",
     "static/js/453.515aeed8.chunk.js": "/static/js/453.515aeed8.chunk.js",
     "static/media/ezspace-image-modern.jpg": "/static/media/ezspace-image-modern.7820838c3e3ac60fb85c.jpg",
@@ -10,12 +10,12 @@
     "static/media/about-sphere1.png": "/static/media/about-sphere1.ad9f75187c96b1d069f2.png",
     "static/media/about-sphere4.png": "/static/media/about-sphere4.0d4c0e681752dd0f2125.png",
     "index.html": "/index.html",
-    "main.4c656f6f.css.map": "/static/css/main.4c656f6f.css.map",
+    "main.c718fd58.css.map": "/static/css/main.c718fd58.css.map",
     "main.de57c32b.js.map": "/static/js/main.de57c32b.js.map",
     "453.515aeed8.chunk.js.map": "/static/js/453.515aeed8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c656f6f.css",
+    "static/css/main.c718fd58.css",
     "static/js/main.de57c32b.js"
   ]
 }
