@@ -19,7 +19,7 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container-lg">
           <div className="row mb-3 align-items-center">
             <div className="col-md-9">
               <p><strong>Why would I need ezspaceCSS?</strong></p>
@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
       </div>
 
       <div className="section-2">
-        <div className="container">
+        <div className="container-lg">
           <div className="row mb-3 align-items-center">
             <div className="col-md-9">
               <p><strong>Getting Started with Bootstrap: Customization Made Easy</strong></p>

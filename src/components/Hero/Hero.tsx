@@ -25,23 +25,19 @@ const App: React.FC = () => {
     <div className="Hero">
       <section id="hero" className="hero">
         <div className="hero-area">
-          <div className="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
-            <div className="row">
-              <div className="col">
+          <div className="container h-100 d-flex flex-column justify-content-center align-items-center">
+            <div className="row align-items-center hero-row">
+              <div className="col-12 col-md-6 order-2 order-md-1">
                 <h1>
-                  <span>ezspace</span>CSS<br />
-                  spacing utility & helper classes<br />
-                  for Bootstrap 3
+                  <span className="hero-name">ez space</span> CSS
+                  <br />spacing utility for 
+                  <br />Bootstrap 3
                 </h1>
-              </div>
-            </div>
-            <div className="row justify-content-center px-3">
-              <div className="col-12 col-md-8 call-out-bg">
                 <h2 className="home-description">
-                  Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3
+                  Quickly adjust padding and margins with ezspaceCSS<br />—a powerful utility package designed for seamless integration with Bootstrap 3
                 </h2>
-                <div className="row npm-call-out">
-                  <div className="col-12 mx-auto">
+                <div className="npm-call-out">
+                  <div className="mx-auto">
                     <a
                       href="https://www.npmjs.com/package/ez-space-css-repo"
                       title="Check out the npm package"
@@ -63,9 +59,16 @@ const App: React.FC = () => {
                     </button>
                   </div>
                 </div>
+              </div>
+              <div className="col-12 col-md-6 order-1 order-md-2 d-flex align-items-center position-relative">
+                <img
+                  src={require('../../assets/images/ez-astro-man.png')}
+                  alt="EZ Astro Man"
+                  className="img-fluid floating"
+                />
                 {copyAlert && (
-                  <div className="alert alert-primary mt-3 mb-0" role="alert">
-                    Text copied to clipboard!
+                  <div className="copy-alert">
+                    You copied the command! Enjoy!
                   </div>
                 )}
               </div>

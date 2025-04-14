@@ -16,6 +16,15 @@
       align-items: center;
       height: 100%;
       padding: 0 1rem;
+
+      .hero-row {
+        max-width: 1080px;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
     }
   }
 
@@ -43,7 +52,7 @@
     font-size: 1rem;
 
     a {
-      color: white;
+      color: black;
       margin-bottom: 0;
       text-decoration: none;
 
@@ -96,6 +105,23 @@
       transform: translateY(-4px); /* Slight upward movement */
     }
   }
+
+  /* Keyframes for floating astro man */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
 }
 
 @media (min-width: 576px) {
@@ -103,5 +129,54 @@
     .npm-call-out {
       font-size: 1.1rem;
     }
+  }
+}
+
+.position-relative {
+  position: relative; // Ensure the parent container is positioned
+}
+
+.copy-alert {
+  position: absolute; // Position relative to the parent container
+  top: 26%; // Center vertically relative to the image
+  left: 67%; // Position to the right of the image
+  width: 250px;
+  transform: translateY(-50%); // Adjust for vertical centering
+  background-color: $bright-yellow; // Use your theme color
+  color: black;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: .75rem;
+
+  // Add a triangle for the speech bubble
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%; // Position the triangle on the left side of the bubble
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0; // Triangle shape
+    border-color: transparent $bright-yellow transparent transparent; // Match the bubble's background color
+  }
+}
+
+// Optional fade-in-out animation
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }

@@ -2,11 +2,13 @@
 $primary-color: #007bff;
 $bright-yellow: #fae13d;
 $space-purple: #66397c;
-$black-opacity: rgba(255, 255, 255, 0.2);
+$black-opacity: rgba(255, 255, 255, 0.4);
 
 // Font Variables
-$heading-font-family: Montserrat, "Helvetica Neue", Helvetica,Arial, sans-serif;
-$heading-font-weight: 700;
+$heading-font-family: 'Oswald', sans-serif;
+$body-font-family: 'Montserrat', sans-serif;
+$body-font-weight: 400; // Regular
+$strong-font-weight: 600; // Semi-bold
 
 // Font Attributes
 $text-shadow: 0 0 9px black;
@@ -14,6 +16,22 @@ $text-shadow: 0 0 9px black;
 // Common Mixins
 @mixin common-heading-styles {
   text-transform: uppercase;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: $heading-font-family;
+  font-weight: 400; // Oswald Regular
+}
+
+// Specific Styles
+h1, h3 {
+  font-family: $heading-font-family;
+  font-weight: 400; // Oswald Regular
+}
+
+h2, body {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight; // Montserrat Regular
+}
+
+p > strong {
+  font-family: $body-font-family;
+  font-weight: $strong-font-weight; // Montserrat Semi-bold
 }
