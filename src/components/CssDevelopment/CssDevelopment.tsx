@@ -9,10 +9,10 @@ const CssDevelopment: React.FC = () => {
       <div className="dev-section">
         <div className="container">
           <div className="row align-items-center call-to-action">
-            <div className="col-md-9">
+            <div className="col-md-8">
               <h3 className="mb-md-0 mb-4">Interested in learning or mastering CSS?</h3>
             </div>
-            <div className="col-md-3 text-center"> 
+            <div className="col-md-4 text-center"> 
               <a
                 href="http://amzn.to/2FTCMIM"
                 target="_blank"

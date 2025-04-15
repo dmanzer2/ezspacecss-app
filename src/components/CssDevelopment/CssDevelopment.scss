@@ -2,8 +2,8 @@
 
   .dev-section {
     background-color: #1E104F;
-    clip-path: polygon(0 70px,100% 0,100% 100%,0 100%);
-    padding: 9rem 0 2rem;
+    clip-path: polygon(0 70px,100% 0,100% calc(100% - 0px),0 100%);
+    padding: 5rem 0 2rem;
     position: relative;
     margin-top: -72px;
 

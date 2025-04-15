@@ -4,22 +4,22 @@
   text-align: left;
 
   .section-1, .section-2 {
-    background-color: #e0d9fa;
+    background-color: white;
   }
 
   .section-1 {
-    height: 110vh;
-    padding: 5rem 0;
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 70px),0 100%);
-    position: relative;
-    margin-bottom: -66px;
+    // height: 110vh;
+    padding: 5rem 0 0;
+    // clip-path: polygon(0 0,100% 0,100% calc(100% - 70px),0 100%);
+    // position: relative;
+    // margin-bottom: -66px;
   }
 
   .section-2 {
-    padding: 5.5rem 0 4rem;
-    clip-path: polygon(0 70px,100% 0,100% calc(100% - 70px),0 100%);
-    position: relative;
-    margin-top: -66px;
+    padding: 0 0 4rem;
+    // clip-path: polygon(0 70px,100% 0,100% calc(100% - 70px),0 100%);
+    // position: relative;
+    // margin-top: -66px;
   }
 
   .about-hr {
@@ -48,12 +48,12 @@
     }
 
     .section-1 {
-      height: 175vh;
-      padding: 5rem 0 5px;
+      // height: 175vh;
+      // padding: 5rem 0 5px;
     }
 
     .section-2 {
-      padding: 8rem 0 5rem;
+      // padding: 8rem 0 5rem;
     }
   }
 }
