@@ -50,7 +50,9 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
   .nav-link {
     color: #eee;
     font-size: 1rem;
-    margin: 0 0.5rem;
+    position: relative;
+    margin: 0 1rem;
+    padding: .5rem 0 !important;
 
     &.active {
       color: $primary-color;
@@ -58,6 +60,28 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
 
     &:hover {
       color: $bright-yellow;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:before {
+      transition: all .5s;
+    }
+
+    &:after {
+      transition: all .5s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '.';
+      color: transparent;
+      background: #aaa;
+      height: 1px;
     }
   }
 
