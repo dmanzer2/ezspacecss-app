@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Hero.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown, faClipboard } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown, faSatellite } from '@fortawesome/free-solid-svg-icons';
 
 const App: React.FC = () => {
   const [copyAlert, setCopyAlert] = useState(false);
@@ -55,7 +55,7 @@ const App: React.FC = () => {
                         handleCopy();
                       }}
                     >
-                      <FontAwesomeIcon icon={faClipboard} />
+                      <FontAwesomeIcon icon={faSatellite} />
                     </button>
                   </div>
                 </div>
