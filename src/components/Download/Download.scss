@@ -2,6 +2,10 @@
 
 #download {
 
+  h3 {
+    font-size: 3rem;
+  }
+
   h3, h4 {
     color: white;
     text-wrap: balance;
@@ -25,7 +29,6 @@
     background-attachment: fixed;
     clip-path: polygon(0 70px,100% 0,100% calc(100% - 70px),0 100%);
     position: relative;
-    // margin-top: -70px;
     padding: 12rem 0;
   }
 }

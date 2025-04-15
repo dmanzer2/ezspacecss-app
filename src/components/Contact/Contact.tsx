@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
         <div className="container contact-area">
           <div className="row py-5 mt-4">
             <div className="col-12 text-center">
-              <h3>Contact ezspaceCSS</h3>
+              <h3>Contact ez space CSS</h3>
               <p>Please feel free to contact me with any questions.</p>
               <a
                 href="mailto:ezspaceCSS@gmail.com"
