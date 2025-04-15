@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d397d11.css",
-    "main.js": "/static/js/main.12de67d2.js",
+    "main.css": "/static/css/main.f238df4a.css",
+    "main.js": "/static/js/main.9d3878a4.js",
     "static/js/453.515aeed8.chunk.js": "/static/js/453.515aeed8.chunk.js",
     "static/media/ezspace-image-modern.jpg": "/static/media/ezspace-image-modern.7820838c3e3ac60fb85c.jpg",
     "static/media/ez-astro-man.png": "/static/media/ez-astro-man.4e6c060e4190c0e7dbae.png",
@@ -11,12 +11,12 @@
     "static/media/about-sphere1.png": "/static/media/about-sphere1.ad9f75187c96b1d069f2.png",
     "static/media/about-sphere4.png": "/static/media/about-sphere4.0d4c0e681752dd0f2125.png",
     "index.html": "/index.html",
-    "main.0d397d11.css.map": "/static/css/main.0d397d11.css.map",
-    "main.12de67d2.js.map": "/static/js/main.12de67d2.js.map",
+    "main.f238df4a.css.map": "/static/css/main.f238df4a.css.map",
+    "main.9d3878a4.js.map": "/static/js/main.9d3878a4.js.map",
     "453.515aeed8.chunk.js.map": "/static/js/453.515aeed8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d397d11.css",
-    "static/js/main.12de67d2.js"
+    "static/css/main.f238df4a.css",
+    "static/js/main.9d3878a4.js"
   ]
 }
