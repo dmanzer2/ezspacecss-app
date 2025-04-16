@@ -9,11 +9,11 @@ const CssDevelopment: React.FC = () => {
     >
       <div className="dev-section">
         <div className="container">
-          <div className="row align-items-center call-to-action">
+          <div className="row align-items-center justify-content-center call-to-action">
             <div className="col-12 col-md-8">
               <h3 className="mb-md-0 mb-4">Interested in learning or mastering CSS?</h3>
             </div>
-            <div className="col-12 col-md-4 text-center"> 
+            <div className="col-12 col-md-auto"> 
               <a
                 href="http://amzn.to/2FTCMIM"
                 target="_blank"
@@ -24,15 +24,15 @@ const CssDevelopment: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className="row align-items-center call-to-action mt-3 mb-5">
-            <div className="col-12 col-md-3">
+          <div className="row align-items-center justify-content-md-center call-to-action mt-3 mb-5">
+            <div className="col-12 col-md-2">
             <img
                 src={cssEbook}
                 alt=""
                 className="img-fluid"
               />
             </div>
-            <div className="col-12 col-md-9">
+            <div className="col-auto col-md-auto">
               <h3 className="mb-md-0 mb-4">Checkout my ebook on CSS Mixins.<br /> Learn how to use them and why you should</h3>
             </div>
           </div>
