@@ -15,4 +15,22 @@
   a.btn {
     color: white;
   }
+
+  .btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
