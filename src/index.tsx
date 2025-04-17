@@ -8,7 +8,7 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-QY8KBKH16Q"); // Replace with your Measurement ID
+ReactGA.initialize("G-QY8KBKH16Q");
 ReactGA.send("pageview");
 
 const root = createRoot(document.getElementById('root') as HTMLElement);

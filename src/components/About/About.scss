@@ -3,16 +3,9 @@
 #about {
   text-align: left;
 
-  .section-1, .section-2 {
-    background-color: white;
-  }
-
   .section-1 {
+    background-color: white;
     padding: 5rem 0 0;
-  }
-
-  .section-2 {
-    padding: 0 0 4rem;
   }
 
   .about-hr {
@@ -23,21 +16,5 @@
 
   .example-section h4 {
     margin-bottom: 2rem !important;
-  }
-}
-
-
-@media (max-width: 576px) {
-  #about {
-
-    p, h4 {
-      text-wrap: balance;
-    }
-
-    .section-1, .section-2 {
-      img {
-        scale: 90%;
-      }
-    }
   }
 }
