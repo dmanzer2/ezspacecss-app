@@ -3,11 +3,23 @@
 .Hero {
 
   .hero {
+    position: relative;
     height: 100vh;
-    background-image: url('../../assets/images/ezspace-image-modern.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../assets/images/ezspace-image-modern.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: -1; // Place it behind the content
+      transform: translateZ(0); // Fix for mobile rendering issues
+    }
 
     > .hero-area {
       display: flex;
@@ -24,6 +36,21 @@
         h1 {
           font-size: 3.5rem;
         }
+        @media (max-width: 575.98px) { // Target screens smaller than 576px
+          h1 {
+            font-size: 2.5rem; // Adjust font size for smaller screens
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) { // Target screens smaller than 576px
+    .hero {
+      height: auto;
+  
+      &::before {
+        background-attachment: scroll; // Ensure smooth scrolling on mobile
       }
     }
   }
@@ -63,6 +90,11 @@
 
     .btn-link {
       color: black;
+
+      svg {
+        height: 20px;
+        margin-top: 5px;
+      }
     }
   }
 
@@ -122,6 +154,14 @@
   .floating {
     animation: float 3s ease-in-out infinite;
   }
+
+  @media (max-width: 575.98px) { // Target screens smaller than 576px
+    .floating {
+      max-width: 336px; // Set the maximum width for the image
+      width: 100%; // Ensure it scales responsively
+      height: auto; // Maintain aspect ratio
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -162,6 +202,12 @@
     border-style: solid;
     border-width: 10px 10px 10px 0; // Triangle shape
     border-color: transparent $bright-yellow transparent transparent; // Match the bubble's background color
+  }
+}
+
+@media (max-width: 575.98px) { // Target screens smaller than 576px
+  .copy-alert {
+    width: 140px;
   }
 }
 

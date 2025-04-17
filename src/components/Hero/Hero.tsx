@@ -33,10 +33,10 @@ const App: React.FC = () => {
                   <br />spacing utility for 
                   <br />Bootstrap 3
                 </h1>
-                <h2 className="home-description">
+                <h2 className="home-description d-none d-md-block">
                   Quickly adjust padding and margins with ezspaceCSS<br />—a powerful utility package designed for seamless integration with Bootstrap 3
                 </h2>
-                <div className="npm-call-out">
+                <div className="npm-call-out mb-4 mb-md-0">
                   <div className="mx-auto">
                     <a
                       href="https://www.npmjs.com/package/ez-space-css-repo"
@@ -75,7 +75,7 @@ const App: React.FC = () => {
             </div>
             <div className="row">
               <div className="col">
-                <button className="btn btn-circle-outline" onClick={scrollToAbout}>
+                <button className="btn btn-circle-outline mb-4 mb-md-0" onClick={scrollToAbout}>
                   <FontAwesomeIcon icon={faAngleDoubleDown} className="white-icon" />
                 </button>
               </div>

@@ -3,7 +3,7 @@
 //Navbar common properties
 $transparent-bg: transparent !important;
 $transition-bg: background-color 0.3s ease;
-$bg-opacity: rgba(0, 0, 0, 0.8) !important;
+$bg-opacity: rgba(0, 0, 0, 0.9) !important;
 
 .navbar {
   position: fixed;
@@ -17,6 +17,7 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
     > .container-fluid:has(.navbar-collapse.collapse.show) {
       background-color: $bg-opacity;
       transition: $transition-bg;
+      text-align: left;
     }
   }
   
@@ -26,6 +27,7 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
 
     .container-fluid:has(.navbar-collapse.collapse.show) {
       background-color: $transparent-bg;
+      text-align: left;
     }
   }
   
@@ -96,5 +98,40 @@ $bg-opacity: rgba(0, 0, 0, 0.8) !important;
   
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+@media (max-width: 575.98px) { // Target screens smaller than 576px
+  .navbar-collapse {
+    text-align: left;
+
+    .nav-link {
+      font-size: 1.25rem;
+      margin: 0 1.5rem;
+      padding: 1.45rem 0 !important;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeIn 2s ease forwards;
+    }
+  }
+  
+  .navbar-collapse.collapse.show {
+    text-align: left;
+
+    .nav-link {
+      font-size: 1.25rem;
+      margin: 0 1.5rem;
+      padding: 1.45rem 0 !important;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeIn 2s ease forwards;
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
