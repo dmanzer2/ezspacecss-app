@@ -44,11 +44,14 @@
   
     &:hover {
       background-color: white;
-      color: #007bff;
+      color: black;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     }
-  
-    .social-icon {
-      font-size: 1.5rem;
+
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: black;
     }
   }
 }
