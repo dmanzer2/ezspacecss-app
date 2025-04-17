@@ -29,4 +29,10 @@
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
   }
+
+  @media (max-width: 575.98px) { // Target screens smaller than 576px
+    .img-fluid {
+      max-width: 75%;
+    }
+  }
 }

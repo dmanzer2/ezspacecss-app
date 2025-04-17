@@ -10,11 +10,11 @@ const CssDevelopment: React.FC = () => {
     >
       <div className="dev-section">
         <div className="container">
-          <div className="row align-items-center justify-content-center call-to-action">
+          <div className="row align-items-center justify-content-center call-to-action my-5">
             <div className="col-12 col-md-auto">
               <h3 className="mb-md-0 mb-4">Interested in a Software Developer's Career?</h3>
             </div>
-            <div className="col-12 col-md-auto"> 
+            <div className="col-12 col-md-auto mb-4 mb-md-0"> 
               <a
                 href="https://amzn.to/4cvxvUE"
                 target="_blank"
@@ -26,7 +26,7 @@ const CssDevelopment: React.FC = () => {
             </div>
           </div>
           <div className="row align-items-center justify-content-md-center call-to-action mt-3 mb-5">
-            <div className="col-12 col-md-2">
+            <div className="col-12 col-md-2 mb-4 mb-md-0">
               <a
                 href={cssMixinsPdf}
                 target="_blank"
