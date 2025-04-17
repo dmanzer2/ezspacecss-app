@@ -1,24 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.75c79a03.css",
-    "main.js": "/static/js/main.5c45b7c7.js",
+    "main.css": "/static/css/main.6a8ecbed.css",
+    "main.js": "/static/js/main.24c642e3.js",
     "static/js/453.515aeed8.chunk.js": "/static/js/453.515aeed8.chunk.js",
     "static/media/css-mixins-cover.png": "/static/media/css-mixins-cover.6262bf9fed384e54044f.png",
     "static/media/css-mixins-ebook.pdf": "/static/media/css-mixins-ebook.56e8ea364086d8d79c71.pdf",
     "static/media/ezspace-image-modern.jpg": "/static/media/ezspace-image-modern.7820838c3e3ac60fb85c.jpg",
     "static/media/ez-astro-man.png": "/static/media/ez-astro-man.4e6c060e4190c0e7dbae.png",
     "static/media/about-image2.jpg": "/static/media/about-image2.b414de10de4c91b7882f.jpg",
-    "static/media/about-sphere2.png": "/static/media/about-sphere2.5226a4c22c4b494abff3.png",
-    "static/media/about-sphere3.png": "/static/media/about-sphere3.cc29bce73ed1bc20f2c6.png",
-    "static/media/about-sphere1.png": "/static/media/about-sphere1.ad9f75187c96b1d069f2.png",
-    "static/media/about-sphere4.png": "/static/media/about-sphere4.0d4c0e681752dd0f2125.png",
     "index.html": "/index.html",
-    "main.75c79a03.css.map": "/static/css/main.75c79a03.css.map",
-    "main.5c45b7c7.js.map": "/static/js/main.5c45b7c7.js.map",
+    "main.6a8ecbed.css.map": "/static/css/main.6a8ecbed.css.map",
+    "main.24c642e3.js.map": "/static/js/main.24c642e3.js.map",
     "453.515aeed8.chunk.js.map": "/static/js/453.515aeed8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75c79a03.css",
-    "static/js/main.5c45b7c7.js"
+    "static/css/main.6a8ecbed.css",
+    "static/js/main.24c642e3.js"
   ]
 }
