@@ -1,9 +1,5 @@
 import React from 'react';
 import './About.scss';
-import aboutImg1 from '../../assets/images/about-sphere1.png';
-import aboutImg2 from '../../assets/images/about-sphere2.png';
-import aboutImg3 from '../../assets/images/about-sphere3.png';
-import aboutImg4 from '../../assets/images/about-sphere4.png';
 
 const AboutSection: React.FC = () => {
   return (

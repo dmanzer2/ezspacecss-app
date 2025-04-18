@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, useNavigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './App.scss';
 import AppNavbar from '../Navbar/Navbar';
@@ -8,6 +8,7 @@ import AboutSection from '../About/About';
 import DownloadSection from '../Download/Download';
 import CssDevelopment from '../CssDevelopment/CssDevelopment';
 import ContactSection from '../Contact/Contact';
+import Loader from '../Loader/Loader';
 
 const sections = [
   { id: 'home', component: <Hero />, offset: 0 },
@@ -39,10 +40,17 @@ const ScrollSpy = ({ setActiveSection }: { setActiveSection: (section: string) =
       });
 
       setActiveSection(currentSection);
-      const newPath = currentSection === 'home' ? '/' : `/${currentSection}`;
 
-      if (location.pathname !== newPath) {
-        navigate(newPath, { replace: true });
+      // Handle the URL for home and other sections
+      const newPath = currentSection === 'home' ? '/' : `${currentSection}`;
+      const currentPath = location.pathname + location.hash;
+
+      if (currentPath !== newPath) {
+        if (currentSection === 'home') {
+          navigate('/', { replace: true }); // Remove hash for home
+        } else {
+          navigate(`${currentSection}`, { replace: true }); // Use hash for other sections
+        }
       }
     };
 
@@ -55,31 +63,68 @@ const ScrollSpy = ({ setActiveSection }: { setActiveSection: (section: string) =
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('home');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    // Hide the loader when the DOM fully loads
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash.replace('#/', '') || 'home';
+      const targetSection = document.getElementById(hash);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+  
+    scrollToHash(); // On initial load
+    window.addEventListener('hashchange', scrollToHash); // On route change
+  
+    return () => {
+      window.removeEventListener('hashchange', scrollToHash);
+    };
+  }, []);
+  
 
   return (
     <Router>
       <div className="App">
-        <Helmet>
-          <title>ezspaceCSS - Bootstrap 3 Spacing Utility</title>
-          <meta name="description" content="Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3." />
-          <meta name="keywords" content="CSS, Bootstrap, spacing, utility classes, frontend, web development" />
-          <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="ezspaceCSS - Bootstrap 3 Spacing Utility" />
-          <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
-          <meta property="og:url" content="https://ezspacecss.com" />
-          <meta property="og:type" content="website" />
-        </Helmet>
+      {isLoading && <Loader />} {/* Show loader while loading */}
+      {!isLoading && (
+        <>
+          <Helmet>
+            <title>ezspaceCSS - Bootstrap 3 Spacing Utility</title>
+            <meta name="description" content="Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3." />
+            <meta name="keywords" content="CSS, Bootstrap, spacing, utility classes, frontend, web development" />
+            <meta name="robots" content="index, follow" />
+            <meta property="og:title" content="ezspaceCSS - Bootstrap 3 Spacing Utility" />
+            <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
+            <meta property="og:url" content="https://ezspacecss.com" />
+            <meta property="og:type" content="website" />
+          </Helmet>
 
-        <AppNavbar activeSection={activeSection} />
-        <ScrollSpy setActiveSection={setActiveSection} />
+          <AppNavbar activeSection={activeSection} />
+          <ScrollSpy setActiveSection={setActiveSection} />
 
-        <main>
-          {sections.map(({ id, component }) => (
-            <section key={id} id={id} className="page-section">
-              {component}
-            </section>
-          ))}
-        </main>
+          <main>
+            {sections.map(({ id, component }) => (
+              <section key={id} id={id} className="page-section">
+                {component}
+              </section>
+            ))}
+          </main>
+        </>
+        )}
       </div>
     </Router>
   );
