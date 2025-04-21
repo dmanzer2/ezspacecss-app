@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter as Router, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './App.scss';
 import AppNavbar from '../Navbar/Navbar';
@@ -40,17 +40,10 @@ const ScrollSpy = ({ setActiveSection }: { setActiveSection: (section: string) =
       });
 
       setActiveSection(currentSection);
+      const newPath = currentSection === 'home' ? '/' : `/${currentSection}`;
 
-      // Handle the URL for home and other sections
-      const newPath = currentSection === 'home' ? '/' : `${currentSection}`;
-      const currentPath = location.pathname + location.hash;
-
-      if (currentPath !== newPath) {
-        if (currentSection === 'home') {
-          navigate('/', { replace: true }); // Remove hash for home
-        } else {
-          navigate(`${currentSection}`, { replace: true }); // Use hash for other sections
-        }
+      if (location.pathname !== newPath) {
+        navigate(newPath, { replace: true });
       }
     };
 
@@ -79,22 +72,14 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const scrollToHash = () => {
-      const hash = window.location.hash.replace('#/', '') || 'home';
-      const targetSection = document.getElementById(hash);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-  
-    scrollToHash(); // On initial load
-    window.addEventListener('hashchange', scrollToHash); // On route change
-  
-    return () => {
-      window.removeEventListener('hashchange', scrollToHash);
-    };
+    const { pathname } = window.location;
+    const sectionId = pathname === '/' ? 'home' : pathname.slice(1);
+
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }, []);
-  
 
   return (
     <Router>
