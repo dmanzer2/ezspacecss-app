@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.f28736c3.css",
+    "main.css": "/static/css/main.246f8a77.css",
     "main.js": "/static/js/main.83737bb5.js",
     "static/js/453.515aeed8.chunk.js": "/static/js/453.515aeed8.chunk.js",
     "static/media/css-mixins-cover.png": "/static/media/css-mixins-cover.6262bf9fed384e54044f.png",
@@ -9,12 +9,12 @@
     "static/media/ez-astro-man.png": "/static/media/ez-astro-man.4e6c060e4190c0e7dbae.png",
     "static/media/about-image2.jpg": "/static/media/about-image2.b414de10de4c91b7882f.jpg",
     "index.html": "/index.html",
-    "main.f28736c3.css.map": "/static/css/main.f28736c3.css.map",
+    "main.246f8a77.css.map": "/static/css/main.246f8a77.css.map",
     "main.83737bb5.js.map": "/static/js/main.83737bb5.js.map",
     "453.515aeed8.chunk.js.map": "/static/js/453.515aeed8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f28736c3.css",
+    "static/css/main.246f8a77.css",
     "static/js/main.83737bb5.js"
   ]
 }
