@@ -61,7 +61,9 @@ const App: React.FC = () => {
   useEffect(() => {
     // Hide the loader when the DOM fully loads
     const handleLoad = () => {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1500);
     };
 
     window.addEventListener('load', handleLoad);

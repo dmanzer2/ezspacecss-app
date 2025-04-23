@@ -1,6 +1,20 @@
 @import '../../assets/styles/shared';
 
 .Hero {
+  opacity: 0; // Start invisible
+  transform: translateY(20px); // Slightly move down for a smooth effect
+  animation: fadeIn 1s ease-out forwards; // Apply the fade-in animation
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); // Start slightly below
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); // End at the original position
+    }
+  }
 
   .hero {
     position: relative;
@@ -122,37 +136,37 @@
       &:hover {
         animation: bounce 1.5s infinite; /* Infinite bounce animation */
       }
-    }
-  }
 
-  /* Keyframes for Icon Animation */
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0); /* Default position */
-    }
-    40% {
-      transform: translateY(-8px); /* Upward movement */
-    }
-    60% {
-      transform: translateY(-4px); /* Slight upward movement */
-    }
-  }
-
-  /* Keyframes for floating astro man */
-  @keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(20px);
-    }
-    100% {
-      transform: translateY(0);
+      /* Keyframes for Icon Animation */
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0); /* Default position */
+        }
+        40% {
+          transform: translateY(-8px); /* Upward movement */
+        }
+        60% {
+          transform: translateY(-4px); /* Slight upward movement */
+        }
+      }
     }
   }
   
   .floating {
     animation: float 3s ease-in-out infinite;
+
+    /* Keyframes for floating astro man */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   }
 
   @media (max-width: 575.98px) { // Target screens smaller than 576px
@@ -208,21 +222,5 @@
 @media (max-width: 575.98px) { // Target screens smaller than 576px
   .copy-alert {
     width: 140px;
-  }
-}
-
-// Optional fade-in-out animation
-@keyframes fade-in-out {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  10%, 90% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
   }
 }
