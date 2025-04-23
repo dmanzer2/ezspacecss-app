@@ -98,6 +98,14 @@ const App: React.FC = () => {
             <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
             <meta property="og:url" content="https://ezspacecss.com" />
             <meta property="og:type" content="website" />
+            <script src="https://analytics.ahrefs.com/analytics.js" data-key="gRiuW2nqeeV9yeY7QYUIxQ" async></script>
+            <script>
+              {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P45ZQL66');
+              `}
+            </script>
           </Helmet>
 
           <AppNavbar activeSection={activeSection} />
