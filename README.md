@@ -1,7 +1,6 @@
 ## ezspaceCSS
 
-## Screenshot
-![screenshot](https://github.com/dmanzer2/src/assets/images/ezspace-home.png)
+![screenshot](https://ezspacecss.com/ezspace-home.png)
 
 ## Getting Started with Create React App
 
