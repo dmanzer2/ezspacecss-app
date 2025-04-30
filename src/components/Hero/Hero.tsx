@@ -27,7 +27,20 @@ const App: React.FC = () => {
         <div className="hero-area">
           <div className="container h-100 d-flex flex-column justify-content-center align-items-center">
             <div className="row align-items-center hero-row">
-              <div className="col-12 col-md-6 order-2 order-md-1">
+              
+              <div className="col-12 col-md-6 order-md-2 d-flex align-items-center position-relative">
+                <img
+                  src={require('../../assets/images/ez-astro-man.png')}
+                  alt="EZ Astro Man"
+                  className="img-fluid floating"
+                />
+                {copyAlert && (
+                  <div className="copy-alert">
+                    You copied the command! Enjoy!
+                  </div>
+                )}
+              </div>
+              <div className="col-12 col-md-6 order-md-1">
                 <h1>
                   <span className="hero-name">ez space</span> CSS
                   <br />spacing utility for 
@@ -59,18 +72,6 @@ const App: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="col-12 col-md-6 order-1 order-md-2 d-flex align-items-center position-relative">
-                <img
-                  src={require('../../assets/images/ez-astro-man.png')}
-                  alt="EZ Astro Man"
-                  className="img-fluid floating"
-                />
-                {copyAlert && (
-                  <div className="copy-alert">
-                    You copied the command! Enjoy!
-                  </div>
-                )}
               </div>
             </div>
             <div className="row">
