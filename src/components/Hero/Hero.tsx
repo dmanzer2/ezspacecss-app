@@ -57,7 +57,7 @@ const App: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      $ npm install ez-space-css-repo 
+                      $ npm install ez-space-css-repo
                     </a>
                     <button
                       type="button"
