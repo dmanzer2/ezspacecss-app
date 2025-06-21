@@ -98,6 +98,7 @@ const App: React.FC = () => {
             <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
             <meta property="og:url" content="https://ezspacecss.com" />
             <meta property="og:type" content="website" />
+            <link rel="canonical" href="https://ezspacecss.com/" />
             <script src="https://analytics.ahrefs.com/analytics.js" data-key="gRiuW2nqeeV9yeY7QYUIxQ" async></script>
             <script>
               {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

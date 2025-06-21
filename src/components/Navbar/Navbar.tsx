@@ -64,6 +64,12 @@ const AppNavbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
             <Nav.Link as={Link} to="/css-development" className={activeSection === 'css-development' ? 'active' : ''} onClick={() => handleNavLinkClick('css-development')}>
               CSS Development
             </Nav.Link>
+            <Nav.Link href="https://www.npmjs.com/package/ez-space-css-repo" target="_blank" rel="noopener noreferrer">
+              NPM Package
+            </Nav.Link>
+            <Nav.Link href="https://github.com/dmanzer2/ez-space-css-repo" target="_blank" rel="noopener noreferrer">
+              GitHub repo
+            </Nav.Link>
             <Nav.Link as={Link} to="/contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => handleNavLinkClick('contact')}>
               Contact
             </Nav.Link>
