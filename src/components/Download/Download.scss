@@ -21,24 +21,24 @@
     padding: 12rem 0;
     clip-path: polygon(0 70px, 100% 0, 100% calc(100% - 70px), 0 100%);
   
-    &::before {
-      content: '';
-      position: fixed; // Use fixed positioning for the background
+    // Background image now handled by <picture> in JSX for WebP support
+    .download-bg-img {
+      position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('../../assets/images/about-image2.jpg');
-      background-size: cover;
-      background-position: center;
-      z-index: -1; // Place it behind the content
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;
+      user-select: none;
     }
   
     @media (max-width: 575.98px) {
-      &::before {
-        position: absolute; // Change to absolute for mobile
-        background-attachment: scroll; // Ensure smooth scrolling on mobile
-        clip-path: none; // Optional: Remove clip-path for better compatibility
+      .download-bg-img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
       }
     }
   }

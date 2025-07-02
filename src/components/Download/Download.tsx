@@ -9,6 +9,18 @@ const DownloadSection: React.FC = () => {
       id="download"
     >
       <div className="download-section">
+        {/* Responsive background image with WebP and JPEG fallback */}
+        <picture>
+          <source srcSet={require('../../assets/images/about-image2.webp')} type="image/webp" />
+          <img
+            src={require('../../assets/images/about-image2.jpg')}
+            alt="About section background"
+            className="download-bg-img"
+            fetchPriority="high"
+            decoding="async"
+            loading="eager"
+          />
+        </picture>
         <div className="container">
           <div className="row mb-3">
             <div className="col-12 col-lg-6 mx-auto">
