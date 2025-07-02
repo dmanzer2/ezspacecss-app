@@ -29,11 +29,17 @@ const App: React.FC = () => {
             <div className="row align-items-center hero-row">
               
               <div className="col-12 col-md-6 order-md-2 d-flex align-items-center position-relative">
-                <img
-                  src={require('../../assets/images/ez-astro-man.png')}
-                  alt="EZ Astro Man"
-                  className="img-fluid floating"
-                />
+                <picture>
+                  <source srcSet={require('../../assets/images/ez-astro-man.webp')} type="image/webp" />
+                  <img
+                    src={require('../../assets/images/ez-astro-man.png')}
+                    alt="EZ Astro Man"
+                    className="img-fluid floating"
+                    height={516}
+                    fetchPriority="high"
+                    loading="lazy"
+                  />
+                </picture>
                 {copyAlert && (
                   <div className="copy-alert">
                     You copied the command! Enjoy!
@@ -63,6 +69,7 @@ const App: React.FC = () => {
                       type="button"
                       className="btn btn-link ml-3"
                       title="Copy to clipboard"
+                      aria-label="Copy npm install command"
                       onClick={(e) => {
                         e.preventDefault();
                         handleCopy();
@@ -76,7 +83,11 @@ const App: React.FC = () => {
             </div>
             <div className="row">
               <div className="col">
-                <button className="btn btn-circle-outline mb-4 mb-md-0" onClick={scrollToAbout}>
+                <button
+                  className="btn btn-circle-outline mb-4 mb-md-0"
+                  onClick={scrollToAbout}
+                  aria-label="Scroll to About section"
+                >
                   <FontAwesomeIcon icon={faAngleDoubleDown} className="white-icon" />
                 </button>
               </div>

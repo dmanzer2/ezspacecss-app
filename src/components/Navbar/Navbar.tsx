@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faGithubAlt, faNpm } from '@fortawesome/free-brands-svg-icons';
 
 const AppNavbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +45,7 @@ const AppNavbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
             setExpanded(false);
           }}
         >
-          <FontAwesomeIcon icon={faGithubAlt} /> EZSPACE
+          EZSPACE
           <span className="highlighted-text">CSS</span>
         </Navbar.Brand>
 
@@ -64,14 +64,29 @@ const AppNavbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
             <Nav.Link as={Link} to="/css-development" className={activeSection === 'css-development' ? 'active' : ''} onClick={() => handleNavLinkClick('css-development')}>
               CSS Development
             </Nav.Link>
-            <Nav.Link href="https://www.npmjs.com/package/ez-space-css-repo" target="_blank" rel="noopener noreferrer">
-              NPM Package
-            </Nav.Link>
-            <Nav.Link href="https://github.com/dmanzer2/ez-space-css-repo" target="_blank" rel="noopener noreferrer">
-              GitHub repo
-            </Nav.Link>
             <Nav.Link as={Link} to="/contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => handleNavLinkClick('contact')}>
               Contact
+            </Nav.Link>
+            <span className="navbar-divider" aria-hidden="true"></span>
+            <Nav.Link
+              href="https://www.npmjs.com/package/ez-space-css-repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link ml-4"
+              aria-label="NPM Package"
+              onClick={() => setExpanded(false)}
+            >
+              <FontAwesomeIcon icon={faNpm} size="lg" />
+            </Nav.Link>
+            <Nav.Link
+              href="https://github.com/dmanzer2/ez-space-css-repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+              aria-label="GitHub repo"
+              onClick={() => setExpanded(false)}
+            >
+              <FontAwesomeIcon icon={faGithubAlt} size="lg" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

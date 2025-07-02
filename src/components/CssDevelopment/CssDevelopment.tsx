@@ -36,6 +36,7 @@ const CssDevelopment: React.FC = () => {
                   src={cssEbook}
                   alt="CSS Mixins Ebook Cover"
                   className="img-fluid"
+                  loading="lazy"
                 />
               </a>
             </div>

@@ -14,7 +14,15 @@
     opacity: 1;
   }
 
-  .example-section h4 {
+  .example-section h3 {
     margin-bottom: 2rem !important;
+
+    font-size: 1.5rem;
+    margin-bottom: initial;
+    color: inherit;
+    text-shadow: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: initial;
+    text-transform: initial;
   }
 }

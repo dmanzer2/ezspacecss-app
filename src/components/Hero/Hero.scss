@@ -35,6 +35,11 @@
       transform: translateZ(0); // Fix for mobile rendering issues
     }
 
+    h2.home-description {
+      text-transform: initial;
+      line-height: 2rem;
+    }
+
     > .hero-area {
       display: flex;
       flex-direction: column;

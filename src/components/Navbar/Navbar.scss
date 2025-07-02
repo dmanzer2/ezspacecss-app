@@ -87,10 +87,22 @@ $bg-opacity: rgba(0, 0, 0, 0.9) !important;
     }
   }
 
+  .icon-link.active {
+    &.active {
+      color: #fff;
+    }
+  }
+
+  .icon-link, .icon-link.active {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
   .navbar-toggler {
     border: none;
 
-    :focus {
+    &:focus, &:focus-visible {
       box-shadow: none;
       outline: none;
     }
@@ -98,6 +110,15 @@ $bg-opacity: rgba(0, 0, 0, 0.9) !important;
   
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  .navbar-divider {
+    display: inline-block;
+    width: 1px;
+    background: rgba(255,255,255,0.5); // or your preferred color
+    margin: .5rem 1rem 0;
+    vertical-align: middle;
+    height: 28px;
   }
 }
 
@@ -125,6 +146,10 @@ $bg-opacity: rgba(0, 0, 0, 0.9) !important;
       opacity: 0;
       transform: translateY(10px);
       animation: fadeIn 2s ease forwards;
+    }
+
+    .navbar-divider {
+      margin: 0 1.5rem;
     }
   }
 

@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
         <div className="container contact-area">
           <div className="row py-5 mt-4">
             <div className="col-12 text-center">
-              <h3>Contact ez space CSS</h3>
+              <h2>Contact ez space CSS</h2>
               <p>Please feel free to contact me with any questions.</p>
               <a
                 href="mailto:ezspaceCSS@gmail.com"
@@ -49,6 +49,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-circle-outline mx-2"
+                  aria-label="Facebook"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
@@ -57,6 +58,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-circle-outline mx-2"
+                  aria-label="Reddit"
                 >
                   <FontAwesomeIcon icon={faReddit} />
                 </a>
@@ -65,6 +67,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-circle-outline mx-2"
+                  aria-label="YouTube"
                 >
                   <FontAwesomeIcon icon={faYoutube} />
                 </a>
@@ -73,6 +76,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-circle-outline mx-2"
+                  aria-label="Pinterest"
                 >
                   <FontAwesomeIcon icon={faPinterest} />
                 </a>
@@ -81,6 +85,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-circle-outline mx-2"
+                  aria-label="Instagram"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
@@ -89,6 +94,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-circle-outline mx-2"
+                  aria-label="NPM"
                 >
                   <FontAwesomeIcon icon={faNpm} />
                 </a>

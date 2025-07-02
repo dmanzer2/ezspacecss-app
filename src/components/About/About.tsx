@@ -10,7 +10,7 @@ const AboutSection: React.FC = () => {
         <div className="container">
           <div className="row mb-3">
             <div className="col-12">
-              <h3>About</h3>
+              <h2>About</h2>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
 
           <div className="row text-center example-section">
             <div className="col-12">
-              <h4 className="mb-3">First choose a screen size (based on Bootstrap 3)</h4>
+              <h3 className="h4 mb-3">First choose a screen size (based on Bootstrap 3)</h3>
               <div className="row mb-3 mb-md-5">
                 <div className="col-12 col-md-3"><p><strong>Extra Small:</strong> <code>xs</code></p></div>
                 <div className="col-12 col-md-3"><p><strong>Small:</strong> <code>sm</code></p></div>
@@ -51,19 +51,19 @@ const AboutSection: React.FC = () => {
                 <div className="col-12 col-md-3"><p><strong>Large:</strong> <code>lg</code></p></div>
               </div>
 
-              <h4>Then choose a property (margin or padding)</h4>
+              <h3>Then choose a property (margin or padding)</h3>
               <div className="row mb-3 mb-md-5">
                 <div className="col-12 col-md-6"><p><strong>padding:</strong> <code>p</code></p></div>
                 <div className="col-12 col-md-6"><p><strong>margin:</strong> <code>m</code></p></div>
               </div>
 
-              <h4>Then choose sides (right, left, top, bottom)</h4>
+              <h3>Then choose sides (right, left, top, bottom)</h3>
               <div className="row mb-3 mb-md-5">
                 <div className="col-12 col-md-6"><p><strong>top, bottom, topbottom:</strong> <code>t</code>, <code>b</code>, <code>tb</code></p></div>
                 <div className="col-12 col-md-6"><p><strong>left, right, leftright:</strong> <code>l</code>, <code>r</code>, <code>lr</code></p></div>
               </div>
 
-              <h4>Finally, add a value (in increments of 5px-100px)</h4>
+              <h3>Finally, add a value (in increments of 5px-100px)</h3>
 
               <div className="row example-usage mb-md-4">
                 <div className="col-12">

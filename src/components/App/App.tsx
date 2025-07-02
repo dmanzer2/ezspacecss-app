@@ -99,8 +99,9 @@ const App: React.FC = () => {
             <meta property="og:url" content="https://ezspacecss.com" />
             <meta property="og:type" content="website" />
             <link rel="canonical" href="https://ezspacecss.com/" />
+            <link rel="preload" as="image" href="/assets/images/ez-astro-man.webp" />
             <script src="https://analytics.ahrefs.com/analytics.js" data-key="gRiuW2nqeeV9yeY7QYUIxQ" async></script>
-            <script>
+            <script defer>
               {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

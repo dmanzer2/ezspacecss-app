@@ -12,8 +12,8 @@ const DownloadSection: React.FC = () => {
         <div className="container">
           <div className="row mb-3">
             <div className="col-12 col-lg-6 mx-auto">
-              <h3 className="mb-4">Download ez space CSS<br/>
-              bootstrap 3 utility classes</h3>
+              <h2 className="mb-4">Download ez space CSS<br/>
+              bootstrap 3 utility classes</h2>
               <a
                 href="https://github.com/dmanzer2/ez-space-css-repo"
                 target="_blank"
