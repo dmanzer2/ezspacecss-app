@@ -24,6 +24,18 @@ const App: React.FC = () => {
   return (
     <div className="Hero">
       <section id="hero" className="hero">
+        {/* Responsive background image with WebP and JPEG fallback */}
+        <picture>
+          <source srcSet={require('../../assets/images/ezspace-image-modern.webp')} type="image/webp" />
+          <img
+            src={require('../../assets/images/ezspace-image-modern.jpg')}
+            alt="Modern ezspace background"
+            className="hero-bg-img"
+            fetchPriority="high"
+            decoding="async"
+            loading="eager"
+          />
+        </picture>
         <div className="hero-area">
           <div className="container h-100 d-flex flex-column justify-content-center align-items-center">
             <div className="row align-items-center hero-row">
