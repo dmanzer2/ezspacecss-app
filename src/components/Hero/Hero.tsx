@@ -54,7 +54,10 @@ const App: React.FC = () => {
           <div className="container h-100 d-flex flex-column justify-content-center align-items-center">
             <div className="row align-items-center hero-row">
               
-              <div className="col-12 col-md-6 order-md-2 d-flex align-items-center justify-content-center position-relative">
+              <div
+                className="col-12 col-md-6 order-md-2 d-flex align-items-center justify-content-center position-relative"
+                style={{ aspectRatio: '1/1', minHeight: 400 }}
+              >
                 <picture>
                   <source srcSet={require('../../assets/images/ez-astro-man.webp')} type="image/webp" />
                   <img
@@ -62,7 +65,6 @@ const App: React.FC = () => {
                     alt="EZ Astro Man"
                     className="img-fluid floating"
                     height={400}
-                    fetchPriority="high"
                     loading="lazy"
                   />
                 </picture>
