@@ -25,9 +25,34 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>ezspaceCSS App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts link removed: now self-hosted -->
     <link rel="preload" href="/static/css/main.6880147c.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/static/css/main.6880147c.css"></noscript>
+    <style>
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Oswald';
+        src: url('/fonts/Oswald-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
