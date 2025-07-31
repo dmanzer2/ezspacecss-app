@@ -159,7 +159,9 @@
   
   .floating {
     animation: float 3s ease-in-out infinite;
-
+    max-width: 400px;
+    width: 100%;
+    height: auto;
     /* Keyframes for floating astro man */
     @keyframes float {
       0% {
@@ -176,17 +178,119 @@
 
   @media (max-width: 575.98px) { // Target screens smaller than 576px
     .floating {
-      max-width: 336px; // Set the maximum width for the image
-      width: 100%; // Ensure it scales responsively
-      height: auto; // Maintain aspect ratio
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      left: 0; // Reset shift on mobile
+      top: 0;
     }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .Hero {
+    .hero {
+      .hero-area {
+        height: 100vh;
+      }
+    }
+  }
+
+  .Hero {
+    .npm-call-out {
+      background-color: black;
+      
+      a, svg {
+        color: white;
+        font-size: .94rem;
+      }
+    }
+  }
+
+  .btn.btn-circle-outline {
+    margin-top: 50%
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .Hero {
+    .hero {
+      .hero-area {
+        height: 100vh;
+
+        .floating {
+          max-width: 230px;
+          width: 100%;
+          height: auto;
+          left: 0; // Reset shift on mobile
+          top: 0;
+        }   
+      }
+    }
+  }
+
+  .Hero {
+    .npm-call-out {
+      background-color: black;
+      
+      a, svg {
+        color: white;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .btn.btn-circle-outline {
+    margin-top: 50%
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .Hero {
+    .hero {
+      .hero-area {
+        height: 100vh;
+
+        .floating {
+          max-width: 400px;
+          width: 100%;
+          height: auto;
+          left: 0; // Reset shift on mobile
+          top: 0;
+        }
+
+        .hero-row h1 {
+          font-size: 2.5rem;
+        }
+        
+        h2.home-description {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .Hero {
+    .npm-call-out {
+      background-color: black;
+      
+      a, svg {
+        color: white;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .btn.btn-circle-outline {
+    margin-top: 80%;
   }
 }
 
 @media (min-width: 576px) {
   .Hero {
     .npm-call-out {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 }
@@ -197,7 +301,7 @@
 
 .copy-alert {
   position: absolute; // Position relative to the parent container
-  top: 26%; // Center vertically relative to the image
+  top: 20%; // Center vertically relative to the image
   left: 67%; // Position to the right of the image
   width: 250px;
   transform: translateY(-50%); // Adjust for vertical centering
@@ -226,6 +330,6 @@
 
 @media (max-width: 575.98px) { // Target screens smaller than 576px
   .copy-alert {
-    width: 140px;
+    width: 130px;
   }
 }

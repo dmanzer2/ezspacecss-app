@@ -26,9 +26,23 @@ const App: React.FC = () => {
       <section id="hero" className="hero">
         {/* Responsive background image with WebP and JPEG fallback */}
         <picture>
-          <source srcSet={require('../../assets/images/ezspace-image-modern.webp')} type="image/webp" />
+          <source
+            srcSet={
+              require('../../assets/images/ezspace-image-modern-400.webp') + ' 400w, ' +
+              require('../../assets/images/ezspace-image-modern-800.webp') + ' 800w, ' +
+              require('../../assets/images/ezspace-image-modern.webp') + ' 1600w'
+            }
+            type="image/webp"
+            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px"
+          />
           <img
             src={require('../../assets/images/ezspace-image-modern.jpg')}
+            srcSet={
+              require('../../assets/images/ezspace-image-modern-400.jpg') + ' 400w, ' +
+              require('../../assets/images/ezspace-image-modern-800.jpg') + ' 800w, ' +
+              require('../../assets/images/ezspace-image-modern.jpg') + ' 1600w'
+            }
+            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px"
             alt="Modern ezspace background"
             className="hero-bg-img"
             fetchPriority="high"
@@ -40,14 +54,14 @@ const App: React.FC = () => {
           <div className="container h-100 d-flex flex-column justify-content-center align-items-center">
             <div className="row align-items-center hero-row">
               
-              <div className="col-12 col-md-6 order-md-2 d-flex align-items-center position-relative">
+              <div className="col-12 col-md-6 order-md-2 d-flex align-items-center justify-content-center position-relative">
                 <picture>
                   <source srcSet={require('../../assets/images/ez-astro-man.webp')} type="image/webp" />
                   <img
                     src={require('../../assets/images/ez-astro-man.png')}
                     alt="EZ Astro Man"
                     className="img-fluid floating"
-                    height={516}
+                    height={400}
                     fetchPriority="high"
                     loading="lazy"
                   />
