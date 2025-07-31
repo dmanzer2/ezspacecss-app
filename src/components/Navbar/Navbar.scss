@@ -28,6 +28,7 @@ $bg-opacity: rgba(0, 0, 0, 0.9) !important;
     .container-fluid:has(.navbar-collapse.collapse.show) {
       background-color: $transparent-bg;
       text-align: left;
+      height: 100vh;
     }
   }
   
@@ -119,6 +120,10 @@ $bg-opacity: rgba(0, 0, 0, 0.9) !important;
     margin: .5rem 1rem 0;
     vertical-align: middle;
     height: 28px;
+  }
+
+  .navbar-collapse.collapse.show {
+    height: 100vh;
   }
 }
 
