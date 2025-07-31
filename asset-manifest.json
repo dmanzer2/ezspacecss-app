@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.edb5f9f5.css",
-    "main.js": "/static/js/main.b318c41a.js",
+    "main.css": "/static/css/main.623b4b3f.css",
+    "main.js": "/static/js/main.2c3a0e4e.js",
     "static/js/453.515aeed8.chunk.js": "/static/js/453.515aeed8.chunk.js",
     "static/media/css-mixins-cover.png": "/static/media/css-mixins-cover.6262bf9fed384e54044f.png",
     "static/media/css-mixins-ebook.pdf": "/static/media/css-mixins-ebook.cebe8d6cedc7dc19f1ed.pdf",
     "static/media/ezspace-image-modern.jpg": "/static/media/ezspace-image-modern.7820838c3e3ac60fb85c.jpg",
     "static/media/ezspace-image-modern.webp": "/static/media/ezspace-image-modern.f9b66ec0ec5a0665bb8c.webp",
-    "static/media/ez-astro-man.png": "/static/media/ez-astro-man.4e6c060e4190c0e7dbae.png",
     "static/media/about-image2.jpg": "/static/media/about-image2.b414de10de4c91b7882f.jpg",
+    "static/media/ez-astro-man.png": "/static/media/ez-astro-man.4e92a64f732f75848d13.png",
     "static/media/about-image2.webp": "/static/media/about-image2.e1d939fddae446edc7cd.webp",
-    "static/media/ez-astro-man.webp": "/static/media/ez-astro-man.2a7309784d846bc80856.webp",
+    "static/media/ezspace-image-modern-800.jpg": "/static/media/ezspace-image-modern-800.528afaf6ca8b8cbc782b.jpg",
+    "static/media/ezspace-image-modern-800.webp": "/static/media/ezspace-image-modern-800.a92e0d4a8de7c34ac714.webp",
+    "static/media/ez-astro-man.webp": "/static/media/ez-astro-man.15bc44db3725b165390d.webp",
+    "static/media/ezspace-image-modern-400.jpg": "/static/media/ezspace-image-modern-400.60e497ad1881c4027efe.jpg",
+    "static/media/ezspace-image-modern-400.webp": "/static/media/ezspace-image-modern-400.c3adc3b795c28d48c108.webp",
     "index.html": "/index.html",
-    "main.edb5f9f5.css.map": "/static/css/main.edb5f9f5.css.map",
-    "main.b318c41a.js.map": "/static/js/main.b318c41a.js.map",
+    "main.623b4b3f.css.map": "/static/css/main.623b4b3f.css.map",
+    "main.2c3a0e4e.js.map": "/static/js/main.2c3a0e4e.js.map",
     "453.515aeed8.chunk.js.map": "/static/js/453.515aeed8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edb5f9f5.css",
-    "static/js/main.b318c41a.js"
+    "static/css/main.623b4b3f.css",
+    "static/js/main.2c3a0e4e.js"
   ]
 }
