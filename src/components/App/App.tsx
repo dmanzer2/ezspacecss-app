@@ -124,11 +124,11 @@ const App: React.FC = () => {
       {!isLoading && (
         <>
           <Helmet>
-            <title>ezspaceCSS - Bootstrap 3 Spacing Utility</title>
+            <title>ezspaceCSS — Effortless Spacing for CSS Layouts</title>
             <meta name="description" content="Quickly adjust padding and margins with ezspaceCSS—a powerful utility package designed for seamless integration with Bootstrap 3." />
             <meta name="keywords" content="CSS, Bootstrap, spacing, utility classes, frontend, web development" />
             <meta name="robots" content="index, follow" />
-            <meta property="og:title" content="ezspaceCSS - Bootstrap 3 Spacing Utility" />
+            <meta property="og:title" content="ezspaceCSS — Effortless Spacing for CSS Layouts" />
             <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
             <meta property="og:url" content="https://ezspacecss.com" />
             <meta property="og:type" content="website" />
