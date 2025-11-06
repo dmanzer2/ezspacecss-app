@@ -1,7 +1,8 @@
-import React, { useEffect, useState, lazy, Suspense } from 'react';
+import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './App.scss';
+import astroManWebp from '../../assets/images/ez-astro-man.webp';
 const AppNavbar = lazy(() => import('../Navbar/Navbar'));
 const Hero = lazy(() => import('../Hero/Hero'));
 const AboutSection = lazy(() => import('../About/About'));
@@ -132,8 +133,8 @@ const App: React.FC = () => {
             <meta property="og:description" content="Quickly adjust padding and margins with ezspaceCSS for Bootstrap 3." />
             <meta property="og:url" content="https://ezspacecss.com" />
             <meta property="og:type" content="website" />
-            <link rel="canonical" href="https://ezspacecss.com/" />
-            <link rel="preload" as="image" href="/assets/images/ez-astro-man.webp" />
+            <link rel="canonical" href="https://ezspacecss.com" />
+            <link rel="preload" as="image" href={astroManWebp} />
           </Helmet>
 
           <AppNavbar activeSection={activeSection} />
